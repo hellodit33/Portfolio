@@ -5,7 +5,7 @@ type Props = {
 
 }
 
-const Contact = () => {
+const Contact = ({ }: Props) => {
 
 
 

@@ -5,9 +5,9 @@ type Props = {
 
 }
 
-const Portfolio = () => {
+const Portfolio = ({ }: Props) => {
     return (
-        <S.Container><p>Portfolio</p></S.Container>
+        <S.Container>Portfolio</S.Container>
     )
 }
 

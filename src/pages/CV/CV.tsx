@@ -5,12 +5,12 @@ type Props = {
 
 }
 
-const CV = () => {
+const CV = ({ }: Props) => {
 
 
 
     return (
-        <S.Container><p>CV</p></S.Container>
+        <S.Container>CV</S.Container>
     )
 }
 

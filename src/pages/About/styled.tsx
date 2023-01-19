@@ -1,6 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
-    color: black;
-    font-size: 14px;
-`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+`;
+export const Image = styled.img`
+  width: 280px;
+  height: 300px;
+  border-radius: 10px;
+`;
