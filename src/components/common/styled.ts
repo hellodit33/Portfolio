@@ -15,6 +15,6 @@ export const Title = styled.p`
   color: white;
 `;
 export const Paragraph = styled.p`
-  font-size: 14px;
+  font-size: 18px;
   color: white;
 `;

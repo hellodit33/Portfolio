@@ -17,6 +17,7 @@ function App() {
         <Route path="/cv" element={<CV />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
     </BrowserRouter>
 
   );

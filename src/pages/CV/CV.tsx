@@ -1,17 +1,30 @@
 import React from 'react'
 import * as S from './styled'
+import ReactFullpage from '@fullpage/react-fullpage';
+import { Title } from '../../components/common/styled';
 
 type Props = {
 
 }
 
-const CV = ({ }: Props) => {
+const Contact = ({ }: Props) => (
+    <ReactFullpage
+        scrollingSpeed={1000}
 
+        render={({ state, fullpageApi }) => {
+            return (
+                <ReactFullpage.Wrapper>
+                    <div className="section">
+                        <S.Container>
+                            <Title>CV</Title>
 
+                        </S.Container>
+                    </div>
 
-    return (
-        <S.Container>CV</S.Container>
-    )
-}
+                </ReactFullpage.Wrapper>
+            );
+        }}
+    />
+);
 
-export default CV
+export default Contact
