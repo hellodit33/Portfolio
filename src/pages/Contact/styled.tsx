@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const LinkContainer = styled.ul`
+    list-style-type: none;`
+
+export const LinkList = styled.li`
+`
+
+export const Links = styled.a`
     color: black;
     font-size: 14px;
 `
