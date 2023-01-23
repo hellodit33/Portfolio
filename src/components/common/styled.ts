@@ -20,7 +20,7 @@ export const Container = styled.div`
 
 export const TextContainer = styled.div`
   display: flex;
-  margin: 40px 100px;
+  margin: 40px 60px;
   flex-direction: column;
   color: white;
 `;
@@ -33,7 +33,9 @@ export const Image = styled.img`
 
 export const Title = styled.p`
   font-size: 25px;
-  color: white;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 5px;
 `;
 export const Paragraph = styled.p`
   font-size: 18px;

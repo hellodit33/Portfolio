@@ -17,7 +17,7 @@ const About = ({ }: Props) => (
             return (
                 <ReactFullpage.Wrapper>
 
-                    <div className="section" style={{ backgroundColor: '#00ab55' }}>
+                    <div className="section" style={{ backgroundColor: '#44703b' }}>
                         <Container>
                             <TextContainer>
                                 <Title>Hi!</Title>
@@ -33,9 +33,23 @@ const About = ({ }: Props) => (
                         </Container>
 
                     </div>
-                    <div className="section" style={{ backgroundColor: '#b455b0' }}>
+                    <div className="section" style={{ backgroundColor: '#cc9b66' }}>
                         <Container>
-                            <Image src={books} />
+                            <Image src={computer} />
+                            <TextContainer>
+                                <Title>Where did I work?</Title>
+                                <Paragraph>I first worked as a journalist after my journalism studies, between 2017 and 2021.</Paragraph>
+                                <Paragraph>After that I worked as an Editorial and Marketing Manager for the film recommendation startup Hint in Stockholm. There I used my knowledge in film and journalism. Later on I also worked with front-end development and UX at the same startup (2021-2022).</Paragraph>
+                                <Paragraph>Nowadays, since November 2022, I work as a Front-end developer at Redmind where I work with website and app development (React + React Native).</Paragraph>
+                                <Paragraph>What I love most in Front-end development is to build real-life projects that have impact on people, especially apps. I love using my creativity to make sure UX will be great for users, and I love that I can see the results of my job more of less right away.</Paragraph>
+
+                            </TextContainer>
+
+                        </Container>
+                    </div>
+
+                    <div className="section" style={{ backgroundColor: '#44703b' }}>
+                        <Container>
                             <TextContainer>
                                 <Title>What did I study?</Title>
                                 <Paragraph>I have four bachelor degrees: in Political Science, Sociology, Journalism & Film Studies. </Paragraph>
@@ -43,24 +57,11 @@ const About = ({ }: Props) => (
                                 <Paragraph>I love studying languages and have therefore also studied Italian, Icelandic and Arabic.</Paragraph>
                                 <Paragraph>My mother tongue is French and I speak Swedish & English fluently. I have a good level in Italian and German while I'm at beginner level in Arabic and Icelandic</Paragraph>
                             </TextContainer>
-
+                            <Image src={books} />
                         </Container>
                     </div>
 
-                    <div className="section" style={{ backgroundColor: '#3fa7ca' }}>
-                        <Container>
-                            <TextContainer>
-                                <Title>Where did I work?</Title>
-                                <Paragraph>I first worked as a journalist after my journalism studies, between 2017 and 2021.</Paragraph>
-                                <Paragraph>After that I worked as an Editorial and Marketing Manager for the film recommendation startup Hint in Stockholm. There I used my knowledge in film and journalism. Later on I also worked with front-end development and UX at the same startup.</Paragraph>
-                                <Paragraph>Nowadays I work as a Front-end developer at Redmind where I work with website and app development (React and React Native).</Paragraph>
-                                <Paragraph>What I love most in Front-end development is to build real-life projects that have impact on people. I love using my creativity to make sure UX will be great for users, and I love that I can see the results of my job more of less right away.</Paragraph>
-                            </TextContainer>
-                            <Image src={computer} />
-                        </Container>
-                    </div>
-
-                    <div className="section" style={{ backgroundColor: '#20bf55' }}>
+                    <div className="section" style={{ backgroundColor: '#cc9b66' }}>
                         <Container>
                             <Image src={watch} />
                             <TextContainer>
@@ -69,7 +70,7 @@ const About = ({ }: Props) => (
                                 <Paragraph>I also play theater every week with a French-speaking Theater organization that I started back in January 2020. We have public representations twice a year (in French with Swedish subtitles).</Paragraph>
                                 <Paragraph>I do some front-end development to help friends with their projects, and to work on some startup ideas I have.</Paragraph>
                                 <Paragraph>I do a lot of organic growing (vegetables and flowers) in a shared garden as soon as the weather permits it in Stockholm.</Paragraph>
-                                <Paragraph>I'm often busy reading books, and I also discuss literature with two book clubs. I often go to the theater and opera.</Paragraph>
+                                <Paragraph>I'm often busy reading books, and I also discuss literature with two bookclubs. I often go to the theater and opera.</Paragraph>
                                 <Paragraph>From time to time I travel abroad by train, often to France and Italy.</Paragraph>
                             </TextContainer>
 

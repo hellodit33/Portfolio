@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const Container = styled.div`
       position: fixed;
         z-index:1;
-    background-color: black;
+    background-color: #44703b;
 width: 100%;
 `;
 
@@ -19,7 +19,7 @@ type StyledLinkProps = {
   name?: boolean;
 };
 export const StyledLink = styled(NavLink) <StyledLinkProps>`
-  color: ${(props) => (props.name ? "white" : "#79CDBE")};
+  color: ${(props) => (props.name ? "white" : "#c9e895")};
   font-size: ${(props) => (props.name ? 30 : 20)}px;
   text-decoration: none;
   margin: 0px 20px;

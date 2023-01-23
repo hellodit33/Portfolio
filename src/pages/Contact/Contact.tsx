@@ -3,6 +3,7 @@ import { Container, Image, Paragraph, TextContainer, Title } from '../../compone
 import { Typewriter } from 'react-simple-typewriter';
 import profilepic from '../../assets/images/elodie.jpg'
 import { LinkContainer, LinkList, Links } from './styled';
+import { FaTwitter, FaGithub, FaPodcast, FaLinkedin } from "react-icons/fa";
 
 type Props = {
 
@@ -16,7 +17,7 @@ const Contact = ({ }: Props) => (
             return (
                 <ReactFullpage.Wrapper>
 
-                    <div className="section" style={{ backgroundColor: '#00ab55' }}>
+                    <div className="section" style={{ backgroundColor: '#44703b' }}>
                         <Container>
                             <TextContainer>
                                 <Title>Get in touch!</Title>
@@ -26,12 +27,12 @@ const Contact = ({ }: Props) => (
                                 <Typewriter words={["Check out my socials:"]}
                                     loop={true}
                                     typeSpeed={100} />
-                                <LinkContainer><LinkList><Links href="https://www.linkedin.com/in/élodie-pradet" rel="noopenner noreferrer">Linkedin</Links></LinkList>
-                                    <LinkList><Links href="https://github.com/hellodit33" rel="noopenner noreferrer">My Github</Links></LinkList>
+                                <LinkContainer><LinkList><Links href="https://www.linkedin.com/in/elodie-pradet" rel="noopenner noreferrer"><FaLinkedin /></Links></LinkList>
+                                    <LinkList><Links href="https://github.com/hellodit33" rel="noopenner noreferrer"><FaGithub /></Links></LinkList>
 
-                                    <LinkList><Links href="https://www.dagsforfranska.com" rel="noopenner noreferrer">My Podcast</Links></LinkList>
+                                    <LinkList><Links href="https://www.dagsforfranska.com" rel="noopenner noreferrer"><FaPodcast /></Links></LinkList>
 
-                                    <LinkList><Links href="https://twitter.com/elodiepradet" rel="noopenner noreferrer">My Twitter</Links></LinkList>
+                                    <LinkList><Links href="https://twitter.com/elodiepradet" rel="noopenner noreferrer"><FaTwitter /></Links></LinkList>
                                 </LinkContainer>
                             </TextContainer>
                             <Image src={profilepic} />
