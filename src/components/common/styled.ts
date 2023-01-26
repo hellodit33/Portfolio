@@ -13,14 +13,14 @@ export const Space = styled.div<SpaceProps>`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 40px 100px;
+  margin: 20px 50px;
   justify-content: center;
   align-items: center;
 `;
 
 export const TextContainer = styled.div`
   display: flex;
-  margin: 40px 60px;
+  margin: 40px 80px;
   flex-direction: column;
   color: white;
 `;

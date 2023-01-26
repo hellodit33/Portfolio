@@ -8,3 +8,8 @@ export const Image = styled.img`
 width: 800px;
 height:400px;
 `
+
+export const Link = styled.a`
+    color: black;
+    font-size: 20px;
+`
