@@ -1,5 +1,12 @@
+:root {
+    --background-color: linear-gradient(120deg, #619b8a, rgba(60, 37, 67, 0.67));
+  
+    --background-overlay: rgba(0, 0, 0, 0.4);
+}
 body {
- background-color: #23283D;
+background: rgb(255,214,10);
+background: radial-gradient(circle, rgba(255,214,10,1) 0%, rgba(203,223,189,1) 100%);
   color: #79CDBE;
   font-family:'Nunito',Arial, Helvetica, sans-serif;
 }
+

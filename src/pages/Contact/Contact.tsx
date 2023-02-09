@@ -1,8 +1,7 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import { Container, Image, Paragraph, TextContainer, Title } from '../../components/common/styled';
+import { Container, Image, LinkContainer, LinkList, Links, Paragraph, TextContainer, Title } from '../../components/common/styled';
 import { Typewriter } from 'react-simple-typewriter';
 import profilepic from '../../assets/images/elodie.jpg'
-import { LinkContainer, LinkList, Links } from './styled';
 import { FaTwitter, FaGithub, FaPodcast, FaLinkedin } from "react-icons/fa";
 
 type Props = {
@@ -30,9 +29,7 @@ const Contact = ({ }: Props) => (
                                 <LinkContainer><LinkList><Links href="https://www.linkedin.com/in/elodie-pradet" rel="noopenner noreferrer"><FaLinkedin /></Links></LinkList>
                                     <LinkList><Links href="https://github.com/hellodit33" rel="noopenner noreferrer"><FaGithub /></Links></LinkList>
 
-                                    <LinkList><Links href="https://www.dagsforfranska.com" rel="noopenner noreferrer"><FaPodcast /></Links></LinkList>
 
-                                    <LinkList><Links href="https://twitter.com/elodiepradet" rel="noopenner noreferrer"><FaTwitter /></Links></LinkList>
                                 </LinkContainer>
                             </TextContainer>
                             <Image src={profilepic} />

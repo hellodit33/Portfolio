@@ -9,10 +9,10 @@ width: 100%;
 `;
 
 export const Nav = styled.div`margin-right: 40px;
-margin: 20px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;`
+margin: 20px 50px;
+
+
+  `
 
 
 type StyledLinkProps = {

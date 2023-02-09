@@ -1,11 +1,14 @@
-import { Container, Image, Paragraph, TextContainer, Title } from '../../components/common/styled'
+import { Column, ColumnLinks, Container, Image, IntroContainer, LinkContainer, LinkList, Links, Paragraph, Space, TextContainer, Title } from '../../components/common/styled'
+import * as S from './styled'
 import profilepic from '../../assets/images/elodie.jpg'
 import books from '../../assets/images/books.png'
 import computer from '../../assets/images/computer.png'
 import watch from '../../assets/images/watch.png'
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Typewriter } from "react-simple-typewriter";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { FaGithub, FaLinkedin, FaPodcast, FaTwitter } from 'react-icons/fa'
 type Props = {
 }
 
@@ -13,37 +16,61 @@ const About = ({ }: Props) => (
     <ReactFullpage
         scrollingSpeed={1000}
         render={({ state, fullpageApi }) => {
+            Aos.init();
 
             return (
                 <ReactFullpage.Wrapper>
-
-                    <div className="section" style={{ backgroundColor: '#44703b' }}>
+                    <div className="section">
                         <Container>
-                            <TextContainer>
-                                <Title>Hi!</Title>
-                                <Paragraph>My name is Elodie Pradet and I'm 28.</Paragraph>
-                                <Paragraph>I'm a front-end developer, currently working at the design and technology venture studio Redmind based in Stockholm.</Paragraph>
+                            <IntroContainer>
+                                <Title>Elodie Pradet</Title>
+                                <Title>Front-end Developer</Title>
+                                <LinkContainer><LinkList><Links href="https://www.linkedin.com/in/elodie-pradet" rel="noopenner noreferrer"><FaLinkedin /></Links></LinkList>
+                                    <LinkList><Links href="https://github.com/hellodit33" rel="noopenner noreferrer"><FaGithub /></Links></LinkList>
 
+                                </LinkContainer>
                                 <Typewriter words={["Scroll to get to know more about me"]}
                                     loop={true}
                                     typeSpeed={100} />
 
-                            </TextContainer>
-                            <Image src={profilepic} />
+                            </IntroContainer>
+
                         </Container>
 
                     </div>
-                    <div className="section" style={{ backgroundColor: '#cc9b66' }}>
+                    <div className="section">
                         <Container>
-                            <Image src={computer} />
                             <TextContainer>
-                                <Title>Where did I work?</Title>
-                                <Paragraph>I first worked as a journalist after my journalism studies, between 2017 and 2021.</Paragraph>
-                                <Paragraph>After that I worked as an Editorial and Marketing Manager for the film recommendation startup Hint in Stockholm. There I used my knowledge in film and journalism. Later on I also worked with front-end development and UX at the same startup (2021-2022).</Paragraph>
-                                <Paragraph>Nowadays, since November 2022, I work as a Front-end developer at Redmind where I work with website and app development (React + React Native).</Paragraph>
-                                <Paragraph>What I love most in Front-end development is to build real-life projects that have impact on people, especially apps. I love using my creativity to make sure UX will be great for users, and I love that I can see the results of my job more of less right away.</Paragraph>
+                                <Column>
+                                    <Title>Hello 👋 </Title>
+                                    <Title>I'm Élodie</Title>
+                                    <Paragraph>I'm a front-end developer with a background in journalism. I'm working as a Software Developer at Redmind, a technology and venture studio based in Stockholm. Efficient, creative and passionate about film and sustainability, I love tech that improves the world.</Paragraph>
+                                    <S.Linkedin><S.Link href="https://www.linkedin.com/in/elodie-pradet/" target="_blank" rel="noopener"> 👩🏻‍💻  {'  '}https://www.linkedin.com/in/elodie-pradet/</S.Link></S.Linkedin>
+                                </Column>
+                                <ColumnLinks>
+                                    <Image src={profilepic} />
+                                    <LinkContainer><LinkList><Links href="https://www.linkedin.com/in/elodie-pradet" rel="noopenner noreferrer"><FaLinkedin /></Links></LinkList>
+                                        <LinkList><Links href="https://github.com/hellodit33" rel="noopenner noreferrer"><FaGithub /></Links></LinkList>
 
+                                    </LinkContainer>
+                                </ColumnLinks>
                             </TextContainer>
+
+                        </Container>
+
+                    </div>
+                    <div className="section" >
+                        <Container>
+                            <S.SubTitle>Work experience</S.SubTitle>
+                            <Space x={2} />
+                            <S.WorkContainer>
+
+                                <S.WorkParagraph style={{ justifySelf: 'flex-end' }}>I first worked as a journalist in Swedish media after my journalism studies, between 2017 and 2021. I mostly worked on social and political issues, as well as on culture subjects. I wrote an investigation piece on the culture of honor. Later on I wrote reportages from Algeria during the revolution, and from France during the Yellow Vests protests.</S.WorkParagraph>
+                                <S.WorkParagraph style={{ justifySelf: 'flex-start' }}>After that I worked as an Editorial and Marketing Manager for the film recommendation startup Hint in Stockholm. There I used my knowledge in film and journalism. Later on I also worked with front-end development and UX at the same startup (2021-2022).</S.WorkParagraph>
+                                <S.WorkParagraph style={{ justifySelf: 'flex-end' }}>Nowadays, since November 2022, I work as a Front-end developer at Redmind where I work with website and app development for the client Moveat (React, React Native, TypeScript, NodeJS, Firebase). I collaborate with the team and the client on an iterative process.</S.WorkParagraph>
+                                <S.WorkParagraph style={{ justifySelf: 'flex-start' }}>What I love the most in Front-end development is to make impactful ideas alive, through websites and apps. I love that I can see the results of my job more or less right away.</S.WorkParagraph>
+
+                            </S.WorkContainer>
 
                         </Container>
                     </div>

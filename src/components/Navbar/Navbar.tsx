@@ -9,7 +9,7 @@ const Navbar = ({ }: Props) => {
         <>
             <S.Container>
                 <S.Nav>
-                    <S.StyledLink name to="/">Elodie Pradet</S.StyledLink>
+
                     <FlexDiv end>
                         <S.StyledLink to="/">About</S.StyledLink>
                         <S.StyledLink to="/portfolio">Portfolio</S.StyledLink>
