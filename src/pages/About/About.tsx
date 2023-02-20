@@ -1,14 +1,12 @@
 import { Column, ColumnLinks, Container, Image, IntroContainer, LinkContainer, LinkList, Links, Paragraph, Space, TextContainer, Title } from '../../components/common/styled'
 import * as S from './styled'
 import profilepic from '../../assets/images/elodie.jpg'
-import books from '../../assets/images/books.png'
-import computer from '../../assets/images/computer.png'
 import watch from '../../assets/images/watch.png'
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Typewriter } from "react-simple-typewriter";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { FaGithub, FaLinkedin, FaPodcast, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 type Props = {
 }
 
@@ -60,9 +58,9 @@ const About = ({ }: Props) => (
 
                     </div>
                     <div className="section" >
-                        <Container>
+                        <S.SecondContainer>
+                          
                             <S.SubTitle>Work experience</S.SubTitle>
-                            <Space x={2} />
                             <S.WorkContainer>
 
                                 <S.WorkParagraph style={{ justifySelf: 'flex-end' }}>I first worked as a journalist in Swedish media after my journalism studies, between 2017 and 2021. I mostly worked on social and political issues, as well as on culture subjects. I wrote an investigation piece on the culture of honor. Later on I wrote reportages from Algeria during the revolution, and from France during the Yellow Vests protests.</S.WorkParagraph>
@@ -72,36 +70,46 @@ const About = ({ }: Props) => (
 
                             </S.WorkContainer>
 
-                        </Container>
+                        </S.SecondContainer>
                     </div>
 
-                    <div className="section" style={{ backgroundColor: '#44703b' }}>
-                        <Container>
-                            <TextContainer>
-                                <Title>What did I study?</Title>
-                                <Paragraph>I have four bachelor degrees: in Political Science, Sociology, Journalism & Film Studies. </Paragraph>
-                                <Paragraph>Since 2021 I study Front-End development at the professional school KYH in Stockholm. I will graduate in May 2023.</Paragraph>
-                                <Paragraph>I love studying languages and have therefore also studied Italian, Icelandic and Arabic.</Paragraph>
-                                <Paragraph>My mother tongue is French and I speak Swedish & English fluently. I have a good level in Italian and German while I'm at beginner level in Arabic and Icelandic</Paragraph>
-                            </TextContainer>
-                            <Image src={books} />
-                        </Container>
+                    <div className="section" style={{ justifyContent:'flex-start'}}>
+                   
+                        <S.ThirdContainer>
+                       
+                        <S.SubTitle style={{display: 'flex', order:2, width:'40%', placeSelf:'center', justifyContent:'flex-start', alignItems: 'center', marginLeft:'-100px'}}>Studies</S.SubTitle>
+                        <S.StudiesContainer>
+                                <S.StudiesParagraph>🎓 I have four bachelor degrees: in Political Science, Sociology, Journalism & Film Studies. </S.StudiesParagraph>
+                                <S.StudiesParagraph style={{marginTop:'140px'}}>👩🏻‍💻 Since 2021 I study Front-End development at the professional school KYH in Stockholm. I will graduate in May 2023.</S.StudiesParagraph>
+                                <S.StudiesParagraph style={{marginTop:'240px' }}>❤️ I love studying languages, both coding ones and human ones.</S.StudiesParagraph>
+                                <S.StudiesParagraph style={{marginTop:'340px'}}>🇫🇷 🇸🇪 🇬🇧 🇮🇹 🇩🇪 My mother tongue is French and I speak Swedish & English fluently. I have a good level in Italian and German while I'm at beginner level in Arabic and Icelandic.</S.StudiesParagraph>
+                                </S.StudiesContainer>
+
+                        </S.ThirdContainer>
                     </div>
 
-                    <div className="section" style={{ backgroundColor: '#cc9b66' }}>
-                        <Container>
-                            <Image src={watch} />
-                            <TextContainer>
-                                <Title>What do I do during my free time?</Title>
-                                <Paragraph>When I have free time I watch films, and I continue writing on a scenario.</Paragraph>
+                    <div className="section">
+                    <S.SubTitle style={{width:'20%'}}>Leisure time</S.SubTitle>
+                        <S.FourthContainer>
+                          
+                <p>Film</p>
+                <p>Theater</p>
+                <p>Front-end</p>
+                <p>Organic growing</p>
+                <p>Reading</p>
+                <p>Travelling by train</p>
+
+
+                          
+                               {/* <Paragraph>When I have free time I watch films, and I continue writing on a scenario.</Paragraph>
                                 <Paragraph>I also play theater every week with a French-speaking Theater organization that I started back in January 2020. We have public representations twice a year (in French with Swedish subtitles).</Paragraph>
                                 <Paragraph>I do some front-end development to help friends with their projects, and to work on some startup ideas I have.</Paragraph>
                                 <Paragraph>I do a lot of organic growing (vegetables and flowers) in a shared garden as soon as the weather permits it in Stockholm.</Paragraph>
                                 <Paragraph>I'm often busy reading books, and I also discuss literature with two bookclubs. I often go to the theater and opera.</Paragraph>
-                                <Paragraph>From time to time I travel abroad by train, often to France and Italy.</Paragraph>
-                            </TextContainer>
+            <Paragraph>From time to time I travel abroad by train, often to France and Italy.</Paragraph>*/}
+                          
 
-                        </Container>
+                        </S.FourthContainer>
                     </div>
                 </ReactFullpage.Wrapper >
             );

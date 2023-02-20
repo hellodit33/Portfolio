@@ -45,6 +45,8 @@ export const Image = styled.img`
   height: 400px;
   border-radius: 30%;
   justify-self: center;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+
 `;
 
 export const Title = styled.p`
