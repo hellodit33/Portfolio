@@ -55,13 +55,11 @@ export const ThirdContainer = styled.div`
 `;
 
 export const FourthContainer = styled.div`
-  display: flex;
- flex-direction:row;
- gap:20px;
-  margin-left: 100px;
-  margin-right: 30px;
- 
-`;
+ display: grid;
+ grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr; 
+justify-content:center;
+align-items:center;
+margin-left:50px;`;
 
 export const WorkContainer = styled.div`
   display: grid;
@@ -122,13 +120,23 @@ export const LeisureImage = styled.img`
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
 `
 export const LeisureText = styled.p`
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 30%;
-  justify-self: center;
+  display:flex;
+  padding:20px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size:14px;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
 `;
 export const Section=styled.div`
+display: grid;
+grid-template-columns: 1fr;
+color: black;
 .fp-overflow {
   overflow-y: visible;
 }
@@ -136,4 +144,5 @@ export const Section=styled.div`
 .fp-watermark {
   display: none;
 }
+
 `
