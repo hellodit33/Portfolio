@@ -12,7 +12,6 @@ export const Linkedin = styled.div`
   flex-direction: row;
   font-size: 18px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-
 `;
 
 export const Link = styled.a`
@@ -51,16 +50,17 @@ export const ThirdContainer = styled.div`
   margin-top: 100px;
   grid-template-columns: 2fr 1fr;
   margin-left: 100px;
-  margin-right:30px;
-  column-gap:0px;
+  margin-right: 30px;
+  column-gap: 0px;
 `;
 
 export const FourthContainer = styled.div`
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+ flex-direction:row;
+ gap:20px;
   margin-left: 100px;
-  margin-right:30px;
-  column-gap:0px;
+  margin-right: 30px;
+ 
 `;
 
 export const WorkContainer = styled.div`
@@ -83,9 +83,8 @@ export const SubTitle = styled.div`
   width: 150%;
   display: flex;
   flex-direction: row;
-height:30px;
-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
-
+  height: 30px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
 `;
 
 export const StudyTitle = styled.div`
@@ -95,22 +94,46 @@ export const StudyTitle = styled.div`
   letter-spacing: 5px;
 `;
 
-export const StudiesParagraph =styled(Paragraph)`background-color: white;
-padding:10px;
-border-radius:30px;
-height:200px;
-width:220px;
+export const StudiesParagraph = styled(Paragraph)`
+  background-color: white;
+  padding: 10px;
+  border-radius: 30px;
+  height: 200px;
+  width: 220px;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
 
   &:hover {
     background-color: #44703b;
     color: white;
   }
-
-`
+`;
 
 export const StudiesContainer = styled.div`
-display: flex;
-flex-direction:row;
-gap:20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+`;
+
+export const LeisureImage = styled.img`
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  justify-self: center;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+`
+export const LeisureText = styled.p`
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  justify-self: center;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+`;
+export const Section=styled.div`
+.fp-overflow {
+  overflow-y: visible;
+}
+
+.fp-watermark {
+  display: none;
+}
 `

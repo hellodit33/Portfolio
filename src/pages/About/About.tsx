@@ -1,7 +1,13 @@
 import { Column, ColumnLinks, Container, Image, IntroContainer, LinkContainer, LinkList, Links, Paragraph, Space, TextContainer, Title } from '../../components/common/styled'
 import * as S from './styled'
 import profilepic from '../../assets/images/elodie.jpg'
-import watch from '../../assets/images/watch.png'
+import movies from '../../assets/images/movies.png'
+import theater from '../../assets/images/theater.png'
+import maps from '../../assets/images/maps.png'
+import computer from '../../assets/images/computer.png'
+import tomat from '../../assets/images/tomat.png'
+import book from '../../assets/images/book.png'
+import ReactFlipCard from 'reactjs-flip-card'
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Typewriter } from "react-simple-typewriter";
 import Aos from 'aos';
@@ -11,10 +17,15 @@ type Props = {
 }
 
 const About = ({ }: Props) => (
+    
     <ReactFullpage
         scrollingSpeed={1000}
+        
         render={({ state, fullpageApi }) => {
             Aos.init();
+            const styles = {
+                card: { height: '200px', width:'200px', borderRadius: 30,},
+            }
 
             return (
                 <ReactFullpage.Wrapper>
@@ -88,16 +99,62 @@ const About = ({ }: Props) => (
                         </S.ThirdContainer>
                     </div>
 
-                    <div className="section">
+                    <S.Section className="section">
                     <S.SubTitle style={{width:'20%'}}>Leisure time</S.SubTitle>
                         <S.FourthContainer>
                           
-                <p>Film</p>
-                <p>Theater</p>
-                <p>Front-end</p>
-                <p>Organic growing</p>
-                <p>Reading</p>
-                <p>Travelling by train</p>
+            
+               <ReactFlipCard
+            frontStyle={styles.card}
+            backStyle={styles.card}
+            flipTrigger="onClick"
+
+            frontComponent={<S.LeisureImage src={movies} />}
+            backComponent={<S.LeisureText>When I have free time I watch films, and I continue writing on a scenario.</S.LeisureText>}
+        />
+          <ReactFlipCard
+            frontStyle={styles.card}
+            backStyle={styles.card}
+            flipTrigger="onClick"
+
+            frontComponent={  <S.LeisureImage src={theater} />}
+            backComponent={<S.LeisureText>I also play theater every week with a French-speaking Theater organization that I started back in January 2020. We have public representations twice a year (in French with Swedish subtitles).</S.LeisureText>}
+            />
+          <ReactFlipCard
+            frontStyle={styles.card}
+            backStyle={styles.card}
+            flipTrigger="onClick"
+
+            frontComponent={  <S.LeisureImage src={computer} />}
+            backComponent={<S.LeisureText>I do some front-end development to help friends with their projects, and to work on some startup ideas I have.</S.LeisureText>}
+        />
+                <ReactFlipCard
+            frontStyle={styles.card}
+            backStyle={styles.card}
+            flipTrigger="onClick"
+
+            frontComponent={  <S.LeisureImage src={tomat} />}
+            backComponent={ <S.LeisureText>I do a lot of organic growing (vegetables and flowers) in a shared garden as soon as the weather permits it in Stockholm.</S.LeisureText>}
+        />
+        <ReactFlipCard
+            frontStyle={styles.card}
+            backStyle={styles.card}
+            flipTrigger="onClick"
+
+            frontComponent={  <S.LeisureImage src={book} />}
+            backComponent={                                <S.LeisureText>I'm often busy reading books, and I also discuss literature with two bookclubs. I often go to the theater and opera.</S.LeisureText>
+        }
+        />
+        <ReactFlipCard
+            frontStyle={styles.card}
+            backStyle={styles.card}
+            flipTrigger="onClick"
+            frontComponent={  <S.LeisureImage src={maps} />}
+            backComponent={            <S.LeisureText>From time to time I travel abroad by train, often to France and Italy.</S.LeisureText>}
+        />
+        
+              
+              
 
 
                           
@@ -110,7 +167,7 @@ const About = ({ }: Props) => (
                           
 
                         </S.FourthContainer>
-                    </div>
+                    </S.Section>
                 </ReactFullpage.Wrapper >
             );
         }}
