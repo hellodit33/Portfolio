@@ -5,7 +5,7 @@ export const Container = styled.div`
     font-size: 14px;
     display:grid;
     grid-template-columns: 1fr 1fr;
-    margin:80px 100px;
+    margin:10px 100px;
     gap:20px;
 `
 
@@ -16,11 +16,14 @@ flex-direction:column;`
 export const CVTitle=styled.div`font-size:25px;
 display:flex;
 align-items:center;
+margin-top:100px;
+margin-left:100px;
 `
 export const MissionTitle=styled.h4`margin:0px;`
 
 export const DateMission =styled.div`display:grid;
-grid-template-columns:1fr 1fr;`
+grid-template-columns:0.5fr 1fr;
+gap:10px;`
 
 export const Work=styled.p`font-weight:200;`
 
