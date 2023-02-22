@@ -62,11 +62,13 @@ export const Paragraph = styled.p`
   width: 70%;
 `;
 
-export const LinkContainer = styled.ul`
+export type LinkProps ={column?:boolean}
+
+export const LinkContainer = styled.ul<LinkProps>`
   list-style-type: none;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: ${(props) => props.column ? 'column' : 'row'};
   padding: 0px;
 `;
 

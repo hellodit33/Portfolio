@@ -26,9 +26,9 @@ import { Typewriter } from "react-simple-typewriter";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-type Props = {};
+type Props = {column?:boolean};
 
-const About = ({}: Props) => (
+const About = ({column}:Props) => (
   <ReactFullpage
     scrollingSpeed={1000}
     render={({ state, fullpageApi }) => {
@@ -96,7 +96,7 @@ const About = ({}: Props) => (
                 </Column>
                 <ColumnLinks>
                   <Image src={profilepic} />
-                  <LinkContainer>
+                  <LinkContainer column>
                     <LinkList>
                       <Links
                         href="https://www.linkedin.com/in/elodie-pradet"

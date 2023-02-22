@@ -1,9 +1,9 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import { Container, Image, LinkContainer, LinkList, Links, Paragraph, TextContainer, Title } from '../../components/common/styled';
+import { Container, Image, LinkContainer, LinkList, Links, Paragraph, Section, TextContainer, Title } from '../../components/common/styled';
 import { Typewriter } from 'react-simple-typewriter';
 import profilepic from '../../assets/images/elodie.jpg'
 import { FaTwitter, FaGithub, FaPodcast, FaLinkedin } from "react-icons/fa";
-
+import * as S from './styled'
 type Props = {
 
 }
@@ -16,10 +16,10 @@ const Contact = ({ }: Props) => (
             return (
                 <ReactFullpage.Wrapper>
 
-                    <div className="section" style={{ backgroundColor: '#44703b' }}>
-                        <Container>
-                            <TextContainer>
-                                <Title>Get in touch!</Title>
+                    <Section className="section" >
+                        <S.WrapperContainer>
+                           <div>
+                                <h2>Get in touch!</h2>
                                 <Paragraph>Would you like to get in contact with me?</Paragraph>
                                 <Paragraph>Contact me at pradetelodie[at]gmail.com</Paragraph>
 
@@ -31,11 +31,11 @@ const Contact = ({ }: Props) => (
 
 
                                 </LinkContainer>
-                            </TextContainer>
+                                </div>
                             <Image src={profilepic} />
-                        </Container>
+                        </S.WrapperContainer>
 
-                    </div>
+                    </Section>
 
                 </ReactFullpage.Wrapper >
             );
