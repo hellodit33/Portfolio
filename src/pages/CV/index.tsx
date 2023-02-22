@@ -1,3 +1,3 @@
-import CV from './CV'
+import CV from "./CV";
 
-export default CV
+export default CV;

@@ -1,12 +1,7 @@
 import ReactFullpage from "@fullpage/react-fullpage";
-import {
-  Paragraph,
-  Section,
- 
-} from "../../components/common/styled";
+import { Paragraph, Section } from "../../components/common/styled";
 import * as S from "./styled";
-import 'animate.css';
-
+import "animate.css";
 
 let links = [
   "https://i.postimg.cc/G3ypT0BH/Gray-Minimalist-Phone-Mockup-Facebook-Cover.png",
@@ -21,25 +16,27 @@ const Portfolio = () => (
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <Section className="section">
+          <S.Section className="section">
             <S.FirstContainer>
-              <S.Title className="animate__animated animate__backInDown">My works</S.Title>
-
+              {" "}
+              <S.Title className="animate__animated animate__backInDown">
+                My works
+              </S.Title>
               <S.CardsContainer>
-                <S.Card>hej</S.Card>
-                <S.Card>fsdfsdfds</S.Card>
-                <S.Card>dsfsdfsd</S.Card>
-                <S.Card>dsfsdfsdf</S.Card>
+                <S.Card>FridgeEase - React Native app</S.Card>
+                <S.Card>Bookclub - React Native app</S.Card>
+                <S.Card>Hint Onboarding - React app</S.Card>
+                <S.Card>First projects</S.Card>
               </S.CardsContainer>
             </S.FirstContainer>
-          </Section>
-          <div className="section" >
+          </S.Section>
+          <div className="section">
             <S.WrapperContainer>
               <S.FirstWrapper>
                 <div>
-              <S.ProjectTitle>FridgeEase</S.ProjectTitle>
+                  <S.ProjectTitle>FridgeEase</S.ProjectTitle>
 
-                <S.Image src={links[0]} />
+                  <S.Image src={links[0]} />
                 </div>
                 <div>
                   <Paragraph>
@@ -70,31 +67,38 @@ const Portfolio = () => (
                 <S.Link href="https://www.figma.com/file/6d50XZEt16kwW6hdGGaTSn/UX-Grupp?node-id=0%3A1">
                   Figma prototype (group work)
                 </S.Link>
-                <S.TechStack><li>React Native</li>
-                <li>JavaScript</li>
-                <li>NodeJS</li>
-                <li>MongoDB</li>
-                <li>Figma</li></S.TechStack>
+                <S.TechStack>
+                  <li>React Native</li>
+                  <li>JavaScript</li>
+                  <li>NodeJS</li>
+                  <li>MongoDB</li>
+                  <li>Figma</li>
+                </S.TechStack>
               </S.WrapperLinks>
             </S.WrapperContainer>
           </div>
           <div className="section" style={{ backgroundColor: "#292929" }}>
             <S.WrapperContainer>
               <S.FirstWrapper>
-              <div>              <S.ProjectTitle>Hint Onboarding</S.ProjectTitle>
-              <S.Image src={links[1]} />
-</div>
-                
                 <div>
-                  <Paragraph style={{color:'white'}}>
+                  {" "}
+                  <S.ProjectTitle>Hint Onboarding</S.ProjectTitle>
+                  <S.Image src={links[1]} />
+                </div>
+
+                <div>
+                  <Paragraph style={{ color: "white" }}>
                     As I worked for the streaming recommendation startup Hint
                     and studied Frontend, I developed a{" "}
-                    <S.Link style={{color:'white'}} href="https://hint-onboarding-app.herokuapp.com">
+                    <S.Link
+                      style={{ color: "white" }}
+                      href="https://hint-onboarding-app.herokuapp.com"
+                    >
                       MERN CRUD website
-                    </S.Link >{" "}
+                    </S.Link>{" "}
                     to onboard people on the streaming discovery platform.
                   </Paragraph>
-                  <Paragraph style={{color:'white'}}>
+                  <Paragraph style={{ color: "white" }}>
                     The users can share their streaming recommendations to their
                     friends on a feed, add pictures and links, edit their
                     profile, go through the onboarding questions process, and
@@ -104,7 +108,10 @@ const Portfolio = () => (
               </S.FirstWrapper>
 
               <div>
-                <S.Link style={{color:'white'}}href="https://github.com/hellodit33/fullstack-mern">
+                <S.Link
+                  style={{ color: "white" }}
+                  href="https://github.com/hellodit33/fullstack-mern"
+                >
                   Github Repository
                 </S.Link>
               </div>
