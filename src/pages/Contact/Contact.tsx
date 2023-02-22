@@ -1,14 +1,12 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import { Container, Image, LinkContainer, LinkList, Links, Paragraph, Section, TextContainer, Title } from '../../components/common/styled';
+import { Image, LinkContainer, LinkList, Links, Paragraph, Section } from '../../components/common/styled';
 import { Typewriter } from 'react-simple-typewriter';
 import profilepic from '../../assets/images/elodie.jpg'
-import { FaTwitter, FaGithub, FaPodcast, FaLinkedin } from "react-icons/fa";
+import {  FaGithub, FaLinkedin } from "react-icons/fa";
 import * as S from './styled'
-type Props = {
 
-}
 
-const Contact = ({ }: Props) => (
+const Contact = () => (
     <ReactFullpage
         scrollingSpeed={1000}
         render={({ state, fullpageApi }) => {
@@ -33,8 +31,9 @@ const Contact = ({ }: Props) => (
                                 </LinkContainer>
                                 </div>
                             <Image src={profilepic} />
+                           
                         </S.WrapperContainer>
-
+                       
                     </Section>
 
                 </ReactFullpage.Wrapper >

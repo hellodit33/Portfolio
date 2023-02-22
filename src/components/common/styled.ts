@@ -39,8 +39,11 @@ export const Column = styled.div`
 export const ColumnLinks = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
+ 
 `;
 export const Image = styled.img`
+z-index:-1;
+position:relative;
   width: 400px;
   height: 400px;
   border-radius: 30%;
@@ -56,10 +59,10 @@ export const Title = styled.p`
   letter-spacing: 5px;
   margin: 5px;
 `;
-export const Paragraph = styled.p`
+export const Paragraph = styled.div`
   font-size: 18px;
   color: black;
-  width: 70%;
+  width: 80%;
 `;
 
 export type LinkProps ={column?:boolean}

@@ -1,5 +1,6 @@
 import FlexDiv from '../common/FlexDiv'
 import * as S from './styled'
+
 type Props = {
     name?: boolean
 }

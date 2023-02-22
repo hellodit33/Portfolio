@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import 'animate.css';
 
 export const Container = styled.div`
       position: fixed;
@@ -23,4 +24,10 @@ export const StyledLink = styled(NavLink) <StyledLinkProps>`
   font-size: ${(props) => (props.name ? 30 : 20)}px;
   text-decoration: none;
   margin: 0px 20px;
+
+  &:hover {
+    animation: jello; 
+animation-duration:2s;
+
+  }
 `;

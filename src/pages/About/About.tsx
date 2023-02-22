@@ -2,15 +2,12 @@ import {
   Column,
   ColumnLinks,
   Container,
-  Image,
-  IntroContainer,
-  LinkContainer,
+  Image, Title, LinkContainer,
   LinkList,
   Links,
   Paragraph,
-  Space,
   TextContainer,
-  Title,
+  Section
 } from "../../components/common/styled";
 import * as S from "./styled";
 import profilepic from "../../assets/images/elodie.jpg";
@@ -26,6 +23,9 @@ import { Typewriter } from "react-simple-typewriter";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import 'animate.css';
+
+
 type Props = {column?:boolean};
 
 const About = ({column}:Props) => (
@@ -39,43 +39,13 @@ const About = ({column}:Props) => (
 
       return (
         <ReactFullpage.Wrapper>
-          <div className="section">
-            <Container>
-              <IntroContainer>
-                <Title>Elodie Pradet</Title>
-                <Title>Front-end Developer</Title>
-                <LinkContainer>
-                  <LinkList>
-                    <Links
-                      href="https://www.linkedin.com/in/elodie-pradet"
-                      rel="noopenner noreferrer"
-                    >
-                      <FaLinkedin />
-                    </Links>
-                  </LinkList>
-                  <LinkList>
-                    <Links
-                      href="https://github.com/hellodit33"
-                      rel="noopenner noreferrer"
-                    >
-                      <FaGithub />
-                    </Links>
-                  </LinkList>
-                </LinkContainer>
-                <Typewriter
-                  words={["Scroll to get to know more about me"]}
-                  loop={true}
-                  typeSpeed={100}
-                />
-              </IntroContainer>
-            </Container>
-          </div>
-          <div className="section">
+          
+          <Section className="section">
             <Container>
               <TextContainer>
                 <Column>
-                  <Title>Hello 👋 </Title>
-                  <Title>I'm Élodie</Title>
+                  <Title className="animate__animated animate__backInUp">Hello 👋 </Title>
+                  <Title className="animate__animated animate__backInDown">I'm Élodie</Title>
                   <Paragraph>
                     I'm a front-end developer with a background in journalism.
                     I'm working as a Frontend Developer at Redmind, a technology
@@ -83,8 +53,8 @@ const About = ({column}:Props) => (
                     and passionate about film and sustainability, I love tech
                     that improves the world.
                   </Paragraph>
-                  <S.Linkedin>
-                    <S.Link
+                  <S.Linkedin className="animate__animated animate__backInLeft">
+                    <S.Link 
                       href="https://www.linkedin.com/in/elodie-pradet/"
                       target="_blank"
                       rel="noopener"
@@ -93,9 +63,16 @@ const About = ({column}:Props) => (
                       👩🏻‍💻 {"  "}https://www.linkedin.com/in/elodie-pradet/
                     </S.Link>
                   </S.Linkedin>
+                 
+
                 </Column>
                 <ColumnLinks>
+                <div>
                   <Image src={profilepic} />
+                  <S.WorkTag className="animate__animated animate__backInDown animate__delay-1s" >
+               Work with me!
+                  </S.WorkTag>
+                  </div>
                   <LinkContainer column>
                     <LinkList>
                       <Links
@@ -117,12 +94,13 @@ const About = ({column}:Props) => (
                 </ColumnLinks>
               </TextContainer>
             </Container>
-          </div>
-          <div className="section">
+          </Section>
+          <Section className="section">
             <S.SecondContainer>
-              <S.SubTitle>Work experience</S.SubTitle>
-              <S.WorkContainer>
-                <S.WorkParagraph style={{ justifySelf: "flex-end" }}>
+              <S.SubTitle className="animate__animated animate__backInUp animate__delay-2s">Work experience</S.SubTitle>
+              <S.WorkContainer  >
+                <S.WorkParagraph className="animate__animated animate__backInDown animate__delay-2s"style={{ justifySelf: "flex-end" }}>
+                <S.BoxTitle>✍️ First: journalism</S.BoxTitle>
                   I first worked as a journalist in Swedish media after my
                   journalism studies, between 2017 and 2021. I mostly worked on
                   social and political issues, as well as on culture subjects. I
@@ -130,32 +108,35 @@ const About = ({column}:Props) => (
                   I wrote reportages from Algeria during the revolution, and
                   from France during the Yellow Vests protests.
                 </S.WorkParagraph>
-                <S.WorkParagraph style={{ justifySelf: "flex-start" }}>
+                <S.WorkParagraph className="animate__animated animate__backInDown animate__delay-3s" style={{ justifySelf: "flex-start" }}>
+                <S.BoxTitle>💡 Then: a startup journey</S.BoxTitle>
                   After that I worked as an Editorial and Marketing Manager for
                   the film recommendation startup Hint in Stockholm. There I
                   used my knowledge in film and journalism. Later on I also
                   worked with front-end development and UX at the same startup
                   (2021-2022).
                 </S.WorkParagraph>
-                <S.WorkParagraph style={{ justifySelf: "flex-end" }}>
+                <S.WorkParagraph className="animate__animated animate__backInDown animate__delay-4s" style={{ justifySelf: "flex-end" }}>
+                <S.BoxTitle>👩🏻‍💻 Now: full time developer</S.BoxTitle>
                   Nowadays, since November 2022, I work as a Front-end developer
                   at Redmind where I work with website and app development for
                   the client Moveat (React, React Native, TypeScript, NodeJS,
                   Firebase). I collaborate with the team and the client on an
                   iterative process.
                 </S.WorkParagraph>
-                <S.WorkParagraph style={{ justifySelf: "flex-start" }}>
+                <S.WorkParagraph  className="animate__animated animate__backInDown animate__delay-5s"style={{ justifySelf: "flex-start" }}>
+                <S.BoxTitle>🚀 Building up great ideas</S.BoxTitle>
                   What I love the most in Front-end development is to make
                   impactful ideas alive, through websites and apps. I love that
                   I can see the results of my job more or less right away.
                 </S.WorkParagraph>
               </S.WorkContainer>
             </S.SecondContainer>
-          </div>
+          </Section>
 
-          <div className="section" style={{ justifyContent: "flex-start" }}>
+          <Section className="section" style={{ justifyContent: "flex-start" }}>
             <S.ThirdContainer>
-              <S.SubTitle
+              <S.SubTitle className="animate__animated animate__backInUp animate__delay-4s"
                 style={{
                   display: "flex",
                   order: 2,
@@ -188,13 +169,14 @@ const About = ({column}:Props) => (
                 </S.StudiesParagraph>
               </S.StudiesContainer>
             </S.ThirdContainer>
-          </div>
+          </Section>
 
-          <S.Section className="section">
-            <S.SubTitle style={{ width: "15%", marginTop:'100px', marginLeft:'100px' }}>Leisure time</S.SubTitle>
-            <div style={{ marginLeft:'100px', marginTop:'150px'}}><Typewriter 
+          <Section className="section">
+            <div style={{display:'flex', flexDirection:'column', justifyContent:'center', }}>
+            <S.SubTitle style={{ width: "15%", marginTop:'100px', marginLeft:'100px' }} className="animate__animated animate__backInUp animate__delay-7s">Leisure time</S.SubTitle>
+            <div style={{ marginLeft:'100px', marginTop:'120px'}}><Typewriter 
                   words={["Click on each card to get to know what I do on my free time."]}
-                  loop={false}
+                  loop={1}
                   typeSpeed={100}
                 />
                 </div>
@@ -275,7 +257,8 @@ const About = ({column}:Props) => (
                 }
               />
             </S.FourthContainer>
-          </S.Section>
+            </div>
+          </Section>
         </ReactFullpage.Wrapper>
       );
     }}
