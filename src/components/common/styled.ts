@@ -78,3 +78,17 @@ export const Links = styled.a`
   color: black;
   font-size: 40px;
 `;
+
+export const Section=styled.div`
+display: grid;
+grid-template-columns: 1fr;
+color: black;
+.fp-overflow {
+  overflow-y: visible;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+`

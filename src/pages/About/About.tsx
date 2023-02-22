@@ -78,7 +78,7 @@ const About = ({}: Props) => (
                   <Title>I'm Élodie</Title>
                   <Paragraph>
                     I'm a front-end developer with a background in journalism.
-                    I'm working as a Software Developer at Redmind, a technology
+                    I'm working as a Frontend Developer at Redmind, a technology
                     and venture studio based in Stockholm. Efficient, creative
                     and passionate about film and sustainability, I love tech
                     that improves the world.
