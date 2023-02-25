@@ -8,6 +8,7 @@ import {
   LinkList,
   Links,
   Paragraph,
+  SectionTitle,
   Space,
   TextContainer,
   Title,
@@ -27,10 +28,14 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "animate.css";
+import colors from "../../theme/colors";
+import StackedCards from "../../components/common/StackedCards";
 
 type Props = { column?: boolean };
 
+
 const About = ({ column }: Props) => (
+
   <ReactFullpage
     scrollingSpeed={1000}
     render={({ state, fullpageApi }) => {
@@ -41,7 +46,7 @@ const About = ({ column }: Props) => (
 
       return (
         <ReactFullpage.Wrapper>
-          <div className="section">
+          <div className="section" style={{ backgroundColor: colors.green }}>
             <Container>
               <TextContainer>
                 <Column>
@@ -54,9 +59,11 @@ const About = ({ column }: Props) => (
                   <Paragraph>
                     I'm a front-end developer with a background in journalism.
                     I'm working as a Frontend Developer at Redmind, a technology
-                    and venture studio based in Stockholm. Efficient, creative
-                    and passionate about film and sustainability, I love tech
-                    that improves the world.
+                    and venture studio based in Stockholm.
+                  </Paragraph>
+                  <Paragraph>
+                    Efficient, creative and passionate about film and
+                    sustainability, I love tech that improves the world.
                   </Paragraph>
                   <S.Linkedin className="animate__animated animate__backInLeft">
                     <S.Link
@@ -73,7 +80,7 @@ const About = ({ column }: Props) => (
                   <div>
                     <Image src={profilepic} />
                     <S.WorkTag className="animate__animated animate__backInDown animate__delay-1s">
-                      Work with me!
+                      Get in touch!
                     </S.WorkTag>
                   </div>
                   <LinkContainer column>
@@ -98,111 +105,87 @@ const About = ({ column }: Props) => (
               </TextContainer>
             </Container>
           </div>
-          <div className="section">
+          <div className="section" style={{ backgroundColor: colors.blue }}>
             <S.SecondContainer>
-              <S.SubTitle>Work experience</S.SubTitle>
+              <SectionTitle>Work Experience</SectionTitle>
               <S.WorkContainer>
-                <S.WorkParagraph
-                  className="animate__animated animate__backInDown animate__delay-2s"
-                  style={{ justifySelf: "flex-end" }}
-                >
-                  <S.BoxTitle>✍️ First: journalism</S.BoxTitle>I first worked as
+                <S.WorkParagraph>
+                  <S.BoxTitle>✍️ First: Journalism</S.BoxTitle>I first worked as
                   a journalist in Swedish media after my journalism studies,
                   between 2017 and 2021. I mostly worked on social and political
-                  issues, as well as on culture subjects. I wrote an
+                  issues, as well as on cultural subjects. I wrote an
                   investigation piece on the culture of honor. Later on I wrote
                   reportages from Algeria during the revolution, and from France
                   during the Yellow Vests protests.
                 </S.WorkParagraph>
-                <S.WorkParagraph
-                  className="animate__animated animate__backInDown animate__delay-3s"
-                  style={{ justifySelf: "flex-start" }}
-                >
-                  <S.BoxTitle>💡 Then: a startup journey</S.BoxTitle>
+                <S.WorkParagraph>
+                  <S.BoxTitle>💡 Then: A Startup Journey</S.BoxTitle>
                   After that I worked as an Editorial and Marketing Manager for
                   the film recommendation startup Hint in Stockholm. There I
                   used my knowledge in film and journalism. Later on I also
                   worked with front-end development and UX at the same startup
                   (2021-2022).
                 </S.WorkParagraph>
-                <S.WorkParagraph
-                  className="animate__animated animate__backInDown animate__delay-4s"
-                  style={{ justifySelf: "flex-end" }}
-                >
-                  <S.BoxTitle>👩🏻‍💻 Now: full time developer</S.BoxTitle>
+                <S.WorkParagraph>
+                  <S.BoxTitle>👩🏻‍💻 Now: Front-End Developer</S.BoxTitle>
                   Nowadays, since November 2022, I work as a Front-end developer
                   at Redmind where I work with website and app development for
                   the client Moveat (React, React Native, TypeScript, NodeJS,
                   Firebase). I collaborate with the team and the client on an
                   iterative process.
                 </S.WorkParagraph>
-                <S.WorkParagraph
-                  className="animate__animated animate__backInDown animate__delay-5s"
-                  style={{ justifySelf: "flex-start" }}
-                >
-                  <S.BoxTitle>🚀 Building up great ideas</S.BoxTitle>
+                <S.WorkParagraph>
+                  <S.BoxTitle>🚀 Building Up Great Ideas</S.BoxTitle>
                   What I love the most in Front-end development is to make
-                  impactful ideas alive, through websites and apps. I love that
+                  impactful ideas alive, through websites and apps. I also enjoy that
                   I can see the results of my job more or less right away.
                 </S.WorkParagraph>
               </S.WorkContainer>
             </S.SecondContainer>
           </div>
 
-          <div className="section" style={{ justifyContent: "flex-start" }}>
+          <div
+            className="section"
+            style={{
+              justifyContent: "flex-start",
+              backgroundColor: colors.yellow,
+            }}
+          >
             <S.ThirdContainer>
-              <S.SubTitle
-                style={{
-                  display: "flex",
-                  order: 2,
-                  width: "40%",
-                  placeSelf: "center",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  marginLeft: "-100px",
-                }}
-              >
-                Studies
-              </S.SubTitle>
+         <SectionTitle>Studies</SectionTitle>
               <S.StudiesContainer>
                 <S.StudiesParagraph>
                   🎓 I have four bachelor degrees: in Political Science,
-                  Sociology, Journalism & Film Studies.{" "}
+                  Sociology, Journalism & Film Studies. My goal was at first to become a journalist, so I started with Political Science & Sociology to get a solid knowledge ground before studying journalism. After a few years in journalism, I changed direction and decided to study Film - the subject I'm most passionate about.
                 </S.StudiesParagraph>
-                <S.StudiesParagraph style={{ marginTop: "140px" }}>
+                <S.StudiesParagraph >
                   👩🏻‍💻 Since 2021 I study Front-End development at the
                   professional school KYH in Stockholm. I will graduate in May
-                  2023.
+                  2023. I had found out about Front-end during my journalism studies, and enjoyed the building, design and logic process behind it.
                 </S.StudiesParagraph>
-                <S.StudiesParagraph style={{ marginTop: "240px" }}>
-                  ❤️ I love studying languages, both coding ones and human ones.
+                <S.StudiesParagraph >
+                🇫🇷 🇸🇪 🇬🇧 🇮🇹 🇩🇪 I've also studied languages. I became fluent in Swedish 2014, and I've also studied Italian and German so that I have a limited working proficiency. I've even studied Icelandic and Arabic, and I'm at beginner level.
                 </S.StudiesParagraph>
-                <S.StudiesParagraph style={{ marginTop: "340px" }}>
-                  🇫🇷 🇸🇪 🇬🇧 🇮🇹 🇩🇪 My mother tongue is French and I speak Swedish
-                  & English fluently. I have a good level in Italian and German
-                  while I'm at beginner level in Arabic and Icelandic.
+                <S.StudiesParagraph >
+                🌱 I have also a deep interest for sustainability. I'm engaged against climate change, and I've studied Climate change and Geology, as well as Innovation & Sustainability, and Rhetoric and Climate Transition.
                 </S.StudiesParagraph>
               </S.StudiesContainer>
             </S.ThirdContainer>
           </div>
 
-          <S.Section className="section">
+          <S.Section
+            className="section"
+            style={{ backgroundColor: colors.purple }}
+          >
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
+                marginTop:'100px'
               }}
             >
-              <S.SubTitle
-                style={{
-                  width: "15%",
-                  marginTop: "100px",
-                  marginLeft: "100px",
-                }}
-              >
-                Leisure time
-              </S.SubTitle>
+             <SectionTitle>Leisure time</SectionTitle>
               <div style={{ marginLeft: "100px", marginTop: "120px" }}>
                 <Typewriter
                   words={[

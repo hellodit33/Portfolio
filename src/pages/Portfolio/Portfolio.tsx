@@ -1,5 +1,5 @@
 import ReactFullpage from "@fullpage/react-fullpage";
-import { Paragraph, Section } from "../../components/common/styled";
+import { Paragraph, Section, SectionTitle } from "../../components/common/styled";
 import * as S from "./styled";
 import "animate.css";
 
@@ -19,9 +19,9 @@ const Portfolio = () => (
           <S.Section className="section">
             <S.FirstContainer>
               {" "}
-              <S.Title className="animate__animated animate__backInDown">
+              <SectionTitle className="animate__animated animate__backInDown">
                 My works
-              </S.Title>
+              </SectionTitle>
               <S.CardsContainer>
                 <S.Card>FridgeEase - React Native app</S.Card>
                 <S.Card>Bookclub - React Native app</S.Card>

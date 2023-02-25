@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import "animate.css";
+import colors from "../../theme/colors";
 
 export const Container = styled.div`
   position: fixed;
   z-index: 1;
-  background-color: #44703b;
+  background-color: ${colors.primary};
   width: 100%;
 `;
 

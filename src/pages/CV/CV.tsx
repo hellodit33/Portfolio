@@ -1,6 +1,7 @@
 import * as S from "./styled";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { Section } from "../../components/common/styled";
+import "animate.css";
 
 const Contact = () => (
   <ReactFullpage
@@ -8,7 +9,7 @@ const Contact = () => (
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <Section className="section">
+          <Section className="section animate__animated animate__fadeInDown" >
             <S.CVTitle>
               <>💼</> EXPERIENCES
             </S.CVTitle>
