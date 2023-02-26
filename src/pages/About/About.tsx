@@ -30,19 +30,23 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "animate.css";
 import colors from "../../theme/colors";
 import StackedCards from "../../components/common/StackedCards";
+import { useEffect, useState } from "react";
 
 type Props = { column?: boolean };
 
 
-const About = ({ column }: Props) => (
+const About = ({ column }: Props) =>{
+ 
 
+  return (
   <ReactFullpage
     scrollingSpeed={1000}
     render={({ state, fullpageApi }) => {
+     
+      
       Aos.init();
-      const styles = {
-        card: {},
-      };
+     
+
 
       return (
         <ReactFullpage.Wrapper>
@@ -51,7 +55,7 @@ const About = ({ column }: Props) => (
               <TextContainer>
                 <Column>
                   <Title className="animate__animated animate__backInUp">
-                    Hello 👋{" "}
+                    Hi 👋{" "}
                   </Title>
                   <Title className="animate__animated animate__backInDown">
                     I'm Élodie
@@ -154,7 +158,7 @@ const About = ({ column }: Props) => (
             <S.ThirdContainer>
          <SectionTitle>Studies</SectionTitle>
               <S.StudiesContainer>
-                <S.StudiesParagraph>
+                <S.StudiesParagraph >
                   🎓 I have four bachelor degrees: in Political Science,
                   Sociology, Journalism & Film Studies. My goal was at first to become a journalist, so I started with Political Science & Sociology to get a solid knowledge ground before studying journalism. After a few years in journalism, I changed direction and decided to study Film - the subject I'm most passionate about.
                 </S.StudiesParagraph>
@@ -191,14 +195,12 @@ const About = ({ column }: Props) => (
                   words={[
                     "Click on each card to get to know what I do on my free time.",
                   ]}
-                  loop={1}
+                  loop={5}
                   typeSpeed={100}
                 />
               </div>
               <S.FourthContainer>
                 <ReactFlipCard
-                  frontStyle={styles.card}
-                  backStyle={styles.card}
                   flipTrigger="onClick"
                   frontComponent={<S.LeisureImage src={movies} />}
                   backComponent={
@@ -209,8 +211,6 @@ const About = ({ column }: Props) => (
                   }
                 />
                 <ReactFlipCard
-                  frontStyle={styles.card}
-                  backStyle={styles.card}
                   flipTrigger="onClick"
                   frontComponent={<S.LeisureImage src={theater} />}
                   backComponent={
@@ -223,8 +223,6 @@ const About = ({ column }: Props) => (
                   }
                 />
                 <ReactFlipCard
-                  frontStyle={styles.card}
-                  backStyle={styles.card}
                   flipTrigger="onClick"
                   frontComponent={<S.LeisureImage src={computer} />}
                   backComponent={
@@ -235,8 +233,6 @@ const About = ({ column }: Props) => (
                   }
                 />
                 <ReactFlipCard
-                  frontStyle={styles.card}
-                  backStyle={styles.card}
                   flipTrigger="onClick"
                   frontComponent={<S.LeisureImage src={tomat} />}
                   backComponent={
@@ -248,8 +244,6 @@ const About = ({ column }: Props) => (
                   }
                 />
                 <ReactFlipCard
-                  frontStyle={styles.card}
-                  backStyle={styles.card}
                   flipTrigger="onClick"
                   frontComponent={<S.LeisureImage src={book} />}
                   backComponent={
@@ -261,8 +255,6 @@ const About = ({ column }: Props) => (
                   }
                 />
                 <ReactFlipCard
-                  frontStyle={styles.card}
-                  backStyle={styles.card}
                   flipTrigger="onClick"
                   frontComponent={<S.LeisureImage src={maps} />}
                   backComponent={
@@ -279,5 +271,5 @@ const About = ({ column }: Props) => (
       );
     }}
   />
-);
+)};
 export default About;

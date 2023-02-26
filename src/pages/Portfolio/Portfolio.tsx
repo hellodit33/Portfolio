@@ -1,23 +1,54 @@
+import React, { useRef, useEffect, useState } from 'react';
 import ReactFullpage from "@fullpage/react-fullpage";
 import { Paragraph, Section, SectionTitle } from "../../components/common/styled";
 import * as S from "./styled";
 import "animate.css";
 
 let links = [
-  "https://i.postimg.cc/G3ypT0BH/Gray-Minimalist-Phone-Mockup-Facebook-Cover.png",
-  "https://i.postimg.cc/q7xjTLT1/hint2.png",
-  "https://i.imgur.com/SMExvWy.png",
-  "https://i.postimg.cc/Df6L6LJn/Ska-rmavbild-2022-07-06-kl-19-54-41.png",
+  "hej", "hello", "hello hello"
 ];
 
-const Portfolio = () => (
-  <ReactFullpage
-    scrollingSpeed={1000}
-    render={({ state, fullpageApi }) => {
-      return (
-        <ReactFullpage.Wrapper>
-          <S.Section className="section">
-            <S.FirstContainer>
+const Portfolio = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [currentSection, setCurrentSection] = useState(1);
+
+  const handleSectionButtonClick = (index: number) => {
+    if (containerRef.current) {
+      const sections = containerRef.current.querySelectorAll<HTMLElement>('.full-section');
+      const sectionWidth = sections[0].offsetWidth;
+      if (index >= 0 && index < sections.length) {
+        containerRef.current.scrollTo({
+          left: index * sectionWidth,
+          behavior: 'smooth'
+        });
+        sections[index].focus();
+        setCurrentSection(index);
+        console.log(index)
+      }
+    }
+  };
+
+  return (
+    <S.ScrollContainer ref={containerRef}>
+      {[...Array(links.length)].map((_, index) => (
+        <S.FullSection key={index} className="full-section">
+          <p>section {index}</p>
+          <p>{links[index]}</p>
+          <button
+            onClick={() => handleSectionButtonClick(index +1)}
+          >
+            Go to section {index + 1}
+          </button>
+        </S.FullSection>
+      ))}
+    </S.ScrollContainer>
+  );
+};
+
+export default Portfolio;
+
+        
+           {/* <S.FirstContainer>
               {" "}
               <SectionTitle className="animate__animated animate__backInDown">
                 My works
@@ -220,10 +251,6 @@ const Portfolio = () => (
                 </Paragraph>
               </div>
             </S.WrapperContainer>
-          </Section>
-        </ReactFullpage.Wrapper>
-      );
-    }}
-  />
-);
-export default Portfolio;
+                  </Section>*/}
+       
+    

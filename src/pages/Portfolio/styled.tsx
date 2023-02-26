@@ -102,3 +102,18 @@ export const ProjectTitle = styled.div`
 export const TechStack = styled.ul`
   color: black;
 `;
+
+
+export const ScrollContainer = styled.div`
+display: flex;
+flex-direction: row;
+overflow-x: scroll;
+height: 100vh;
+`;
+
+export const FullSection = styled.section`
+width: 100vw;
+height: 100vh;
+flex-shrink: 0;
+margin-top:100px;
+`;

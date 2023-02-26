@@ -1,8 +1,8 @@
 export default {
     primary: '#000814',
-    pink: '#ff99c8',
-    yellow:'#fcf6bd',
+    pink: '#ffadad',
+    yellow:'#fdffb6',
     green: '#d0f4de',
-    blue: '#a9def9',
+    blue: '#c0fdff',
     purple:'#e4c1f9'
   }

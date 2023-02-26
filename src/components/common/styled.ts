@@ -64,7 +64,7 @@ export const Title = styled.p`
 export const Paragraph = styled.div`
   font-size: 18px;
   color: black;
-  width: 60%;
+  width: 70%;
 `;
 
 export type LinkProps = { column?: boolean };
