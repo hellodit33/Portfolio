@@ -37,6 +37,7 @@ export const TextContainer = styled.div`
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 export const ColumnLinks = styled.div`
@@ -58,7 +59,7 @@ export const Title = styled.p`
   font-weight: 900;
   letter-spacing: 5px;
   margin: 5px;
-  font-family: 'Cardo';
+  font-family: 'Libre Baskerville';
 
 `;
 export const Paragraph = styled.div`
@@ -106,6 +107,6 @@ export const SectionTitle = styled.h1`
   place-self:center;
   justify-content:center;
   align-items:center;
-  font-family: 'Cardo';
-
+  font-family: 'Libre Baskerville';
+  letter-spacing:5px;
 `;

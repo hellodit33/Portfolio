@@ -53,7 +53,7 @@ export const Section = styled.div`
 
 export const CardsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -61,8 +61,8 @@ export const CardsContainer = styled.div`
 
 export const Card = styled.div`
   border-radius: 30px;
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
   border: 2px solid white;
   display: flex;
   flex-direction: column;
@@ -109,11 +109,11 @@ display: flex;
 flex-direction: row;
 overflow-x: scroll;
 height: 100vh;
+margin:0px;
 `;
 
 export const FullSection = styled.section`
 width: 100vw;
 height: 100vh;
 flex-shrink: 0;
-margin-top:100px;
 `;

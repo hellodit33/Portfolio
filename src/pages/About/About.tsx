@@ -31,6 +31,18 @@ import "animate.css";
 import colors from "../../theme/colors";
 import StackedCards from "../../components/common/StackedCards";
 import { useEffect, useState } from "react";
+import light from "../../assets/images/light.png";
+import loupe from "../../assets/images/loupe.png";
+import click from "../../assets/images/click.png";
+import cam from "../../assets/images/cam.png";
+import computer3d from "../../assets/images/computer3d.png";
+import folder from "../../assets/images/folder.png";
+import heart from "../../assets/images/heart.png";
+import pencil from "../../assets/images/pencil.png";
+import stars from "../../assets/images/stars.png";
+import star from "../../assets/images/star.png";
+import booky from "../../assets/images/booky.png";
+
 
 type Props = { column?: boolean };
 
@@ -109,9 +121,9 @@ const About = ({ column }: Props) =>{
               </TextContainer>
             </Container>
           </div>
-          <div className="section" style={{ backgroundColor: colors.blue }}>
+          <div className="section" style={{ backgroundColor: colors.yellow_highlight }}>
             <S.SecondContainer>
-              <SectionTitle>Work Experience</SectionTitle>
+              <SectionTitle>WORK EXPERIENCE</SectionTitle>
               <S.WorkContainer>
                 <S.WorkParagraph>
                   <S.BoxTitle>✍️ First: Journalism</S.BoxTitle>I first worked as
@@ -152,11 +164,21 @@ const About = ({ column }: Props) =>{
             className="section"
             style={{
               justifyContent: "flex-start",
-              backgroundColor: colors.yellow,
+              backgroundColor: colors.purple_dark,
             }}
           >
             <S.ThirdContainer>
-         <SectionTitle>Studies</SectionTitle>
+         <SectionTitle>STUDIES</SectionTitle>
+         <S.StudiesImage style={{top:'400px'}} src={light} />
+         <S.StudiesImage style={{top:'600px', left: '20px'}} src={loupe} />
+         <S.StudiesImage style={{top:'650px', left: '50px'}} src={stars} />
+         <S.StudiesImage style={{top:'650px', left: '50px'}} src={pencil} />
+         <S.StudiesImage style={{bottom:'650px', left: '50px'}} src={cam} />
+         <S.StudiesImage style={{bottom :'150px', right: '50px'}} src={click} />
+         <S.StudiesImage style={{bottom:'650px', right: '50px'}}src={computer3d} />
+         <S.StudiesImage style={{bottom:'650px', left: '20px'}} src={folder} />
+         <S.StudiesImage style={{bottom:'650px', right: '1000px'}} src={booky} />
+
               <S.StudiesContainer>
                 <S.StudiesParagraph >
                   🎓 I have four bachelor degrees: in Political Science,
@@ -168,7 +190,7 @@ const About = ({ column }: Props) =>{
                   2023. I had found out about Front-end during my journalism studies, and enjoyed the building, design and logic process behind it.
                 </S.StudiesParagraph>
                 <S.StudiesParagraph >
-                🇫🇷 🇸🇪 🇬🇧 🇮🇹 🇩🇪 I've also studied languages. I became fluent in Swedish 2014, and I've also studied Italian and German so that I have a limited working proficiency. I've even studied Icelandic and Arabic, and I'm at beginner level.
+                🇫🇷 🇸🇪 🇬🇧 🇮🇹 🇩🇪 Besides coding languages, I've also studied human languages. I became fluent in Swedish 2014, and I have a limited working proficiency in Italian and German. I've even studied Icelandic and Arabic.
                 </S.StudiesParagraph>
                 <S.StudiesParagraph >
                 🌱 I have also a deep interest for sustainability. I'm engaged against climate change, and I've studied Climate change and Geology, as well as Innovation & Sustainability, and Rhetoric and Climate Transition.

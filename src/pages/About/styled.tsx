@@ -25,10 +25,10 @@ export const Link = styled.a`
 
 export const WorkParagraph = styled.p`
   border-top: 4px dashed;
-  border-color: ${colors.pink} !important;
+  border-color: ${colors.orange} !important;
   margin: 0;
   padding: 30px;
-
+  font-size:17px;
   &:nth-child(even) {
     border-left: 2px dashed;
     border-top-left-radius: 30px;
@@ -65,9 +65,10 @@ export const SecondContainer = styled.div`
 
 export const ThirdContainer = styled.div`
   display: grid;
-  margin-top: 100px;
   grid-template-columns: 1fr;
   column-gap: 0px;
+  margin-top: 100px;
+
 `;
 
 export const FourthContainer = styled.div`
@@ -276,5 +277,12 @@ export const WorkTag = styled.div`
 export const BoxTitle = styled.div`
   font-size: 23px;
   margin-bottom: 10px;
-  font-family: "Cardo";
+  font-family: "Libre Baskerville";
 `;
+
+export const StudiesImage=styled.img`
+width:150px;
+height:150px;
+z-index:1;
+position:absolute;
+`
