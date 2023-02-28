@@ -72,11 +72,13 @@ export const ThirdContainer = styled.div`
 `;
 
 export const FourthContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+ display:flex;
+ flex-direction:column;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
+  height:fit-content;
+  margin-top:100px;
+  
 `;
 
 export const WorkContainer = styled.div`
@@ -124,7 +126,7 @@ export const StudiesParagraph = styled.div`
   position: relative;
   padding: 1em;
   z-index: 5;
-  width: 40%;
+  width: 35%;
   font-size: 18px;
   border-radius: 30px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
@@ -220,11 +222,19 @@ export const StudiesP = styled.p`
 export const StudiesContainer = styled.div`
   position: relative;
   width: 100%;
-  margin: 1em 27em;
+  margin: 3em 27em;
   @media (max-width: 705px) {
     margin: 4em auto;
   }
 `;
+
+
+
+const cardsAnimation = keyframes`
+0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+`
 
 export const LeisureImage = styled.img`
   width: 200px;
@@ -232,9 +242,13 @@ export const LeisureImage = styled.img`
   border-radius: 30%;
   justify-self: center;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  animation: ${cardsAnimation} 5s infinite;
+
+
 `;
 export const LeisureText = styled.p`
   width: 180px;
+
   height: 180px;
   border-radius: 30%;
   border: 2px solid white;
@@ -279,10 +293,54 @@ export const BoxTitle = styled.div`
   margin-bottom: 10px;
   font-family: "Libre Baskerville";
 `;
+const imageAnimation = keyframes`
+
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+`
+
+
 
 export const StudiesImage=styled.img`
+
+
+animation: ${imageAnimation} 5s infinite;
+
 width:150px;
 height:150px;
 z-index:1;
 position:absolute;
 `
+
+export const ScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+          scroll-snap-type: y mandatory;
+  height: 100vh;
+  margin: 0px;
+
+
+`;
+
+export const FullSection = styled.section`
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative; /* add this to make child element position absolute within this section */
+
+
+`;
+
+export const Grid=styled.div`
+display:grid;
+justify-content:center;
+align-content:center;
+align-items:center;
+margin-top:50px;
+grid-template-columns:1fr 1fr 1fr;
+column-gap:200px;
+row-gap:200px;`

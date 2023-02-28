@@ -1,29 +1,33 @@
-import ReactFullpage from "@fullpage/react-fullpage";
 import {
+  FullSection,
   Image,
   LinkContainer,
   LinkList,
   Links,
   Paragraph,
-  Section,
+  ScrollContainer,
+  Space,
+  Title,
 } from "../../components/common/styled";
 import { Typewriter } from "react-simple-typewriter";
 import profilepic from "../../assets/images/elodie.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import * as S from "./styled";
+import colors from "../../theme/colors";
 
-const Contact = () => (
-  <ReactFullpage
-    scrollingSpeed={1000}
-    render={({ state, fullpageApi }) => {
+const Contact = () => {
+  
       return (
-        <ReactFullpage.Wrapper>
-          <Section className="section">
+      <ScrollContainer>
+          <FullSection style={{backgroundColor: colors.green_highlight}}>
             <S.WrapperContainer>
               <div>
-                <h2>Get in touch!</h2>
+                <Title>Get in<br></br>touch with me!</Title>
+                <Space />
                 <Paragraph>Would you like to get in contact with me?</Paragraph>
+                <Space />
                 <Paragraph>Contact me at pradetelodie[at]gmail.com</Paragraph>
+                <Space />
 
                 <Typewriter
                   words={["Check out my socials:"]}
@@ -51,10 +55,9 @@ const Contact = () => (
               </div>
               <Image src={profilepic} />
             </S.WrapperContainer>
-          </Section>
-        </ReactFullpage.Wrapper>
+            </FullSection>
+            </ScrollContainer>
+       
       );
-    }}
-  />
-);
+      }
 export default Contact;

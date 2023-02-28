@@ -94,6 +94,7 @@ export const Section = styled.div`
   .fp-overflow {
     overflow-y: visible;
   }
+ 
 
   .fp-watermark {
     display: none;
@@ -102,6 +103,8 @@ export const Section = styled.div`
 
 export const SectionTitle = styled.h1`
   display: flex;
+  font-size:30px;
+  text-transform:uppercase;
   align-self: center;
   text-align-center;
   place-self:center;
@@ -109,4 +112,37 @@ export const SectionTitle = styled.h1`
   align-items:center;
   font-family: 'Libre Baskerville';
   letter-spacing:5px;
+`;
+
+export const Subtitle = styled.h1`
+  display: flex;
+  font-size:20px;
+  
+  align-self: center;
+  text-align-center;
+  place-self:center;
+  justify-content:center;
+  align-items:center;
+  
+  letter-spacing:5px;
+`;
+
+export const ScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+          scroll-snap-type: y mandatory;
+  height: 100vh;
+  margin: 0px;
+
+
+`;
+export const FullSection = styled.section`
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+
+
 `;

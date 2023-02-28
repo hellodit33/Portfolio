@@ -7,6 +7,14 @@ export default {
     purple:'#e4c1f9',
     orange: '#ff5400',
     yellow_highlight: '#fee440',
-    purple_dark: '#390099'
+    purple_dark: '#7209B7',
+    green_highlight:'#06d6a0',
+    moveat: "#FEE100",
+    hint: "#d7bdfb",
+    bookclub: "#9b5d64",
+    fridge: "#a1c2fc", 
+    lilla:"#b8ad96",
+    dags:'#f7f7fd',
+    beige: "#fefae0"
 
   }

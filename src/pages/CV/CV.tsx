@@ -1,15 +1,15 @@
 import * as S from "./styled";
-import ReactFullpage from "@fullpage/react-fullpage";
-import { Section } from "../../components/common/styled";
+// @ts-ignore
+import cv from '../../assets/cv.pdf';
+// @ts-ignore
+import cvsvenska from '../../assets/cvsvenska.pdf';
 import "animate.css";
 
-const Contact = () => (
-  <ReactFullpage
-    scrollingSpeed={1000}
-    render={({ state, fullpageApi }) => {
+const CV = () => {
+
       return (
-        <ReactFullpage.Wrapper>
-          <Section className="section animate__animated animate__fadeInDown" >
+        <S.ScrollContainer>
+          <S.FullSection className="section animate__animated animate__fadeInDown" >
             <S.CVTitle>
               <>💼</> EXPERIENCES
             </S.CVTitle>
@@ -50,7 +50,7 @@ const Contact = () => (
                       streaming recommendations startup Hint.
                     </S.Work>
                     <S.Work>
-                      Website maintenance on Wordpress & Webflow.{" "}
+                      Website maintenance on Wordpress & Webflow.
                     </S.Work>
                     <S.Work>
                       Front-end development on the chatbot (JavaScript) and the
@@ -79,10 +79,10 @@ const Contact = () => (
                   <S.Date>February 2019 - December 2021</S.Date>
                   <div>
                     <S.Work>
-                      Freelance journalism in Sweden, Algeria and France.{" "}
+                      Freelance journalism in Sweden, Algeria and France.
                     </S.Work>
                     <S.Work>
-                      {" "}
+                     
                       Reportages during the Algerian revolution in 2019 and the
                       yellow vest protests in France in 2019.
                     </S.Work>
@@ -123,9 +123,9 @@ const Contact = () => (
                 </S.DateMission>
               </S.ColumnContainer>
             </S.Container>
-          </Section>
-          <Section className="section">
-            <S.CVTitle>🏫 EDUCATION</S.CVTitle>
+          </S.FullSection>
+          <S.FullSection className="section">
+            <S.CVTitle>  <>🏫 </> EDUCATION</S.CVTitle>
 
             <S.Container>
               <S.ColumnContainer>
@@ -230,30 +230,33 @@ const Contact = () => (
                     alignSelf: "flex-start",
                   }}
                 >
-                  💻 TECHNICAL SKILLS
+                  <>💻 </>TECHNICAL SKILLS
                 </S.CVTitle>
-                <ul>
-                  <li>
+                <S.TechList>
+                  <S.TechListItem>
                     {" "}
                     JavaScript, TypeScript, React Native, ReactJS, Flutter
-                  </li>
-                  <li>NodeJS, MongoDB, Firebase, Strapi, Postman</li>
-                  <li>Webflow, Wordpress</li>
-                  <li>Git, Scrum, Agile, Mob programming</li>
-                  <li>
-                    {" "}
+                  </S.TechListItem>
+                  <S.TechListItem>NodeJS, MongoDB, Firebase, Strapi, Postman</S.TechListItem>
+                  <S.TechListItem>Webflow, Wordpress</S.TechListItem>
+                  <S.TechListItem>Git, Scrum, Agile, Mob programming</S.TechListItem>
+                  <S.TechListItem>
+                    
                     Adobe Premiere Pro, After Effects, Audition, Photoshop,
                     Lightroom, inDesign, Figma
-                  </li>
-                  <li>Google Analytics, Google Search Console</li>
-                </ul>
+                  </S.TechListItem>
+                  <S.TechListItem>Google Analytics, Google Search Console</S.TechListItem>
+                </S.TechList>
               </S.ColumnContainer>
+             
             </S.Container>
-          </Section>
-        </ReactFullpage.Wrapper>
+            <S.CvSection>
+            <S.CvLink href={cv} download> Download CV in English</S.CvLink>
+            <S.CvLink href={cvsvenska} download>Download CV in Swedish</S.CvLink>
+              </S.CvSection>
+          </S.FullSection>
+          </S.ScrollContainer>
       );
-    }}
-  />
-);
+                }
 
-export default Contact;
+export default CV;

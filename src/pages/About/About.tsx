@@ -3,13 +3,13 @@ import {
   ColumnLinks,
   Container,
   Image,
-  IntroContainer,
+
   LinkContainer,
   LinkList,
   Links,
   Paragraph,
   SectionTitle,
-  Space,
+  
   TextContainer,
   Title,
 } from "../../components/common/styled";
@@ -22,47 +22,30 @@ import computer from "../../assets/images/computer.png";
 import tomat from "../../assets/images/tomat.png";
 import book from "../../assets/images/book.png";
 import ReactFlipCard from "reactjs-flip-card";
-import ReactFullpage from "@fullpage/react-fullpage";
 import { Typewriter } from "react-simple-typewriter";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "animate.css";
-import colors from "../../theme/colors";
-import StackedCards from "../../components/common/StackedCards";
-import { useEffect, useState } from "react";
+
 import light from "../../assets/images/light.png";
 import loupe from "../../assets/images/loupe.png";
 import click from "../../assets/images/click.png";
-import cam from "../../assets/images/cam.png";
 import computer3d from "../../assets/images/computer3d.png";
 import folder from "../../assets/images/folder.png";
-import heart from "../../assets/images/heart.png";
-import pencil from "../../assets/images/pencil.png";
+
 import stars from "../../assets/images/stars.png";
-import star from "../../assets/images/star.png";
 import booky from "../../assets/images/booky.png";
+import colors from "../../theme/colors";
 
 
 type Props = { column?: boolean };
 
-
 const About = ({ column }: Props) =>{
- 
-
+  Aos.init();
   return (
-  <ReactFullpage
-    scrollingSpeed={1000}
-    render={({ state, fullpageApi }) => {
-     
-      
-      Aos.init();
-     
-
-
-      return (
-        <ReactFullpage.Wrapper>
-          <div className="section" style={{ backgroundColor: colors.green }}>
+      <S.ScrollContainer>
+        <S.FullSection style={{backgroundColor:colors.green}}>
             <Container>
               <TextContainer>
                 <Column>
@@ -120,8 +103,9 @@ const About = ({ column }: Props) =>{
                 </ColumnLinks>
               </TextContainer>
             </Container>
-          </div>
-          <div className="section" style={{ backgroundColor: colors.yellow_highlight }}>
+            </S.FullSection>
+            
+            <S.FullSection style={{backgroundColor:colors.yellow_highlight}}>
             <S.SecondContainer>
               <SectionTitle>WORK EXPERIENCE</SectionTitle>
               <S.WorkContainer>
@@ -158,26 +142,18 @@ const About = ({ column }: Props) =>{
                 </S.WorkParagraph>
               </S.WorkContainer>
             </S.SecondContainer>
-          </div>
+            </S.FullSection>
 
-          <div
-            className="section"
-            style={{
-              justifyContent: "flex-start",
-              backgroundColor: colors.purple_dark,
-            }}
-          >
+            <S.FullSection style={{backgroundColor:colors.purple_dark}}>
             <S.ThirdContainer>
          <SectionTitle>STUDIES</SectionTitle>
-         <S.StudiesImage style={{top:'400px'}} src={light} />
-         <S.StudiesImage style={{top:'600px', left: '20px'}} src={loupe} />
+         <S.StudiesImage style={{top:'400px', left: '25px'}} src={light} />
+         <S.StudiesImage style={{top:'500px', left: '100px'}} src={loupe} />
          <S.StudiesImage style={{top:'650px', left: '50px'}} src={stars} />
-         <S.StudiesImage style={{top:'650px', left: '50px'}} src={pencil} />
-         <S.StudiesImage style={{bottom:'650px', left: '50px'}} src={cam} />
-         <S.StudiesImage style={{bottom :'150px', right: '50px'}} src={click} />
-         <S.StudiesImage style={{bottom:'650px', right: '50px'}}src={computer3d} />
-         <S.StudiesImage style={{bottom:'650px', left: '20px'}} src={folder} />
-         <S.StudiesImage style={{bottom:'650px', right: '1000px'}} src={booky} />
+         <S.StudiesImage style={{bottom:'100px', right: '50px'}} src={click} />
+         <S.StudiesImage style={{top:'60px', right: '50px'}}src={computer3d} />
+         <S.StudiesImage style={{top:'60px', left: '20px'}} src={folder} />
+         <S.StudiesImage style={{top:'300px', right: '90px'}} src={booky} />
 
               <S.StudiesContainer>
                 <S.StudiesParagraph >
@@ -197,31 +173,23 @@ const About = ({ column }: Props) =>{
                 </S.StudiesParagraph>
               </S.StudiesContainer>
             </S.ThirdContainer>
-          </div>
+            </S.FullSection>
 
-          <S.Section
-            className="section"
-            style={{ backgroundColor: colors.purple }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                marginTop:'100px'
-              }}
-            >
-             <SectionTitle>Leisure time</SectionTitle>
-              <div style={{ marginLeft: "100px", marginTop: "120px" }}>
-                <Typewriter
-                  words={[
-                    "Click on each card to get to know what I do on my free time.",
-                  ]}
-                  loop={5}
-                  typeSpeed={100}
-                />
-              </div>
+            <S.FullSection style={{backgroundColor:colors.green}}>
+           
+          
+             
               <S.FourthContainer>
+              <SectionTitle>Leisure time</SectionTitle>
+             
+             <Typewriter
+               words={[
+                 "Click on each card to get to know what I do on my free time.",
+               ]}
+               loop={5}
+               typeSpeed={100}
+             />
+              <S.Grid>
                 <ReactFlipCard
                   flipTrigger="onClick"
                   frontComponent={<S.LeisureImage src={movies} />}
@@ -286,12 +254,12 @@ const About = ({ column }: Props) =>{
                     </S.LeisureText>
                   }
                 />
+                              </S.Grid>
+
               </S.FourthContainer>
-            </div>
-          </S.Section>
-        </ReactFullpage.Wrapper>
+              </S.FullSection>
+          </S.ScrollContainer>
       );
-    }}
-  />
-)};
+    }
+
 export default About;
