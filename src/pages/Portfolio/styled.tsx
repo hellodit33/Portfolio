@@ -14,6 +14,11 @@ export const First = styled.div`
   column-gap: 100px;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    text-align: center;
+  }
 `;
 export const WrapperContainer = styled.div`
   display: grid;
@@ -22,17 +27,36 @@ export const WrapperContainer = styled.div`
   margin-top: 100px;
   justify-content: center;
   align-items: center;
+ 
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    margin-left: 0px;
+    text-align: center;
+  }
 `;
 
 export const FirstWrapper = styled.div`
   display: grid;
   grid-template-rows: 1fr 0.5fr;
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-export const WrapperLinks = styled.div`
+export const SecondWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width:200px;
+  background-color: white;
+  padding:50px;
+  align-items:center;
+  border-radius: 60%;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
+
 `;
 export const Image = styled.img`
   width: 800px;
@@ -41,6 +65,10 @@ export const Image = styled.img`
   border: 1px solid white;
   margin: 10px 0px;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 export const WorkImage = styled.img`
   width: 400px;
@@ -53,6 +81,11 @@ export const WorkImage = styled.img`
     animation: pulse 2s infinite;
 
   }
+}
+@media screen and (max-width: 1100px) {
+  width: 200px;
+  height: 200px;
+}
 `;
 
 export const ProjectImage = styled.img`
@@ -69,7 +102,6 @@ export const ProjectImage = styled.img`
 
 export const Link = styled.a`
   color: black;
-  font-size: 20px;
 `;
 
 export const Section = styled.div`
@@ -133,6 +165,7 @@ export const ProjectTitle = styled.div`
 
 export const TechStack = styled.ul`
   color: black;
+ 
 `;
 
 export const ScrollContainer = styled.div`
@@ -143,6 +176,11 @@ export const ScrollContainer = styled.div`
 
   height: 100vh;
   margin: 0px;
+  @media only screen and (max-width: 1100px) {
+    scroll-snap-type: none;
+    height: auto;
+    overflow: visible;
+  }
 `;
 
 export const FullSection = styled.section`
@@ -189,3 +227,6 @@ export const WorkHeader = styled.div`
   text-align: center;
 `;
 
+export const TechStackList=styled.ul`padding:0px;`
+
+export const TechListItem=styled.li`font-size:18px;`

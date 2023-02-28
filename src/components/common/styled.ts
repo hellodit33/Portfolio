@@ -110,14 +110,14 @@ export const SectionTitle = styled.h1`
   place-self:center;
   justify-content:center;
   align-items:center;
-  font-family: 'Libre Baskerville';
   letter-spacing:5px;
 `;
 
 export const Subtitle = styled.h1`
   display: flex;
   font-size:20px;
-  
+  font-family: 'Libre Baskerville';
+
   align-self: center;
   text-align-center;
   place-self:center;

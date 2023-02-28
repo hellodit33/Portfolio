@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import { Paragraph } from "../../components/common/styled";
 import "animate.css";
 import colors from "../../theme/colors";
 

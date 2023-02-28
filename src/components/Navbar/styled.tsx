@@ -17,6 +17,7 @@ export const Nav = styled.div`
 
 type StyledLinkProps = {
   name?: boolean;
+  active?:boolean
 };
 export const StyledLink = styled(NavLink)<StyledLinkProps>`
   color: ${(props) => (props.name ? "white" : "#c9e895")};
@@ -28,5 +29,8 @@ export const StyledLink = styled(NavLink)<StyledLinkProps>`
     animation: jello;
     color: white;
     animation-duration: 2s;
+  }
+   &.active {
+    color: ${colors.pink};
   }
 `;
