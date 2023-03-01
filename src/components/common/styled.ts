@@ -11,13 +11,20 @@ export const Space = styled.div<SpaceProps>`
 `;
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+display:flex;
+flex-direction:column;
   height: 100vh;
   justify-content: center;
-  place-items: center;
+  align-items:center;
   column-gap: 0px;
   margin: 0px 200px 0px 200px;
+  @media only screen and (max-width: 950px) {
+    margin: 0px 30px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin: 30px;
+  }
+
 `;
 
 export const IntroContainer = styled.div`
@@ -32,17 +39,34 @@ export const TextContainer = styled.div`
   grid-template-columns: 3fr 2fr;
   color: black;
   justify-content: center;
+  @media only screen and (max-width: 768px) {
+   display: flex;
+   flex-direction:column-reverse;
+
+
+
+  }
 `;
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  
 `;
 
 export const ColumnLinks = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
+  justify-content:center;
+  align-items:center;
+  @media only screen and (max-width: 768px) {
+   display:flex;
+   flex-direction:row;
+   justify-content:flex-start;
+
+   }
 `;
 export const Image = styled.img`
   position: relative;
@@ -51,6 +75,22 @@ export const Image = styled.img`
   border-radius: 30%;
   justify-self: center;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 950px) {
+    width: 400px;
+    height:380px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+    height:280px;
+  }
+  @media only screen and (max-width: 300px) {
+    width: 200px;
+    height:180px;
+ 
+ 
+ 
+   }
 `;
 
 export const Title = styled.p`
@@ -60,6 +100,13 @@ export const Title = styled.p`
   letter-spacing: 5px;
   margin: 5px;
   font-family: 'Libre Baskerville';
+  @media only screen and (max-width: 950px) {
+    font-size: 55px;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+
 
 `;
 export const Paragraph = styled.div`

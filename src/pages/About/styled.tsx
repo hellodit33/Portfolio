@@ -5,7 +5,7 @@ import colors from "../../theme/colors";
 export const Linkedin = styled.div`
   background-color: white;
   border-radius: 30px;
-  width: 80%;
+  width: fit-content;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 10px 30px;
@@ -15,6 +15,13 @@ export const Linkedin = styled.div`
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   margin-bottom: 10px;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    width: fit-content;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+  }
 `;
 
 export const Link = styled.a`
@@ -27,7 +34,7 @@ export const WorkParagraph = styled.p`
   border-color: ${colors.orange} !important;
   margin: 0;
   padding: 30px;
-  font-size:17px;
+  font-size: 17px;
   &:nth-child(even) {
     border-left: 2px dashed;
     border-top-left-radius: 30px;
@@ -60,6 +67,9 @@ export const SecondContainer = styled.div`
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px;
+  @media (max-width: 768px) {
+    margin: 10px;
+  }
 `;
 
 export const ThirdContainer = styled.div`
@@ -67,22 +77,35 @@ export const ThirdContainer = styled.div`
   grid-template-columns: 1fr;
   column-gap: 0px;
   margin-top: 100px;
-
+  @media (max-width: 1100px) {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const FourthContainer = styled.div`
- display:flex;
- flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:fit-content;
-  margin-top:100px;
-  
+  height: fit-content;
+  margin-top: 100px;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const WorkContainer = styled.div`
   width: 900px;
   margin: auto;
+  @media only screen and (max-width: 1100px) {
+    width: 600px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: fit-content;
+  }
 `;
 
 export const SubTitle = styled.div`
@@ -112,15 +135,6 @@ export const StudyTitle = styled.div`
   letter-spacing: 5px;
 `;
 
-const cardAnimation = keyframes`
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-1em);
-  }
-`;
-
 export const StudiesParagraph = styled.div`
   position: relative;
   padding: 1em;
@@ -133,7 +147,7 @@ export const StudiesParagraph = styled.div`
   margin-top: 1em;
 
   &:hover {
-    z-index: 8;
+    z-index: 11;
     transform: scale(1.05);
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
   }
@@ -141,60 +155,36 @@ export const StudiesParagraph = styled.div`
     margin-left: -13em;
     margin-top: 1em;
     background-color: ${colors.pink};
-  }
-  @media (max-width: 705px) {
-    &:first-of-type {
-      margin-left: -1em;
-      margin-right: 1em;
+    height: fit-content;
+    @media only screen and (max-width:950px) {
+      margin:0px;
+      margin-right:-5em;
     }
   }
-  @media (max-width: 550px) {
-    &:first-of-type {
-      margin: 0;
-    }
-  }
+
   &:nth-of-type(2) {
     margin-left: 5em;
     margin-right: -5em;
     margin-top: -2em;
     background-color: ${colors.blue};
-  }
-  @media (max-width: 705px) {
-    &:nth-of-type(2) {
-      margin-left: 1em;
-      margin-right: -1em;
-      margin-top: 1em;
+    height: fit-content;
+    @media only screen and (max-width: 950px) {
+      margin-top: -10em;
+    }
+    @media only screen and (max-width:950px) {
+      margin:-1em;
+      margin-left:-5em;
     }
   }
-  @media (max-width: 550px) {
-    &:nth-of-type(2) {
-      margin: 1em 0 0;
-    }
-  }
+
   &:nth-of-type(3) {
     margin-top: -2em;
     margin-left: -4em;
     background-color: ${colors.purple};
-  }
-  @media (max-width: 705px) {
-    &:nth-of-type(3) {
-      margin-left: -1em;
-      margin-right: 1em;
-      margin-top: 1em;
-    }
-    &:nth-of-type(3):after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1em;
-      display: block;
-      border-bottom: 5px solid rgba(192, 57, 43, 0.6);
-    }
-  }
-  @media (max-width: 550px) {
-    &:nth-of-type(3) {
-      margin: 1em 0 0;
+    height: fit-content;
+    @media only screen and (max-width:950px) {
+      margin:-1em;
+      margin-right:-5em;
     }
   }
 
@@ -202,6 +192,25 @@ export const StudiesParagraph = styled.div`
     margin-top: -2em;
     margin-left: 12em;
     background-color: ${colors.green};
+    height: fit-content;
+    @media only screen and (max-width: 950px) {
+      margin:-1em;
+      margin-left:-5em;
+    }
+    
+  }
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 15px;
+  }
+  @media only screen and (max-width: 1100px) {
+    display: flex;
+    flex-direction: column;
+    width:45%;
   }
 `;
 
@@ -222,18 +231,25 @@ export const StudiesContainer = styled.div`
   position: relative;
   width: 100%;
   margin: 3em 27em;
-  @media (max-width: 705px) {
-    margin: 4em auto;
+  @media only screen and (max-width: 1250px) {
+    margin: -1em 23em;
+  }
+  @media only screen and (max-width: 1100px) {
+    margin:0px;
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    justify-content: center;
+    align-items: center;
   }
 `;
-
-
 
 const cardsAnimation = keyframes`
 0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
-`
+`;
 
 export const LeisureImage = styled.img`
   width: 200px;
@@ -243,11 +259,18 @@ export const LeisureImage = styled.img`
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
   animation: ${cardsAnimation} 5s infinite;
 
-
+  @media only screen and (max-width: 950px) {
+    width: 150px;
+    height: 150px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 140px;
+    height: 140px;
+  }
+  
 `;
 export const LeisureText = styled.p`
   width: 180px;
-
   height: 180px;
   border-radius: 30%;
   border: 2px solid white;
@@ -259,6 +282,15 @@ export const LeisureText = styled.p`
   text-align: center;
   font-size: 15px;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  @media only screen and (max-width: 950px) {
+    width: 130px;
+    height: 130px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
+ 
 `;
 export const Section = styled.div`
   display: grid;
@@ -275,7 +307,7 @@ export const Section = styled.div`
 
 export const WorkTag = styled.div`
   background-color: lightgray;
-  width: 10%;
+  width: fit-content;
   border-radius: 30px;
   padding: 10px;
   font-size: 20px;
@@ -283,8 +315,23 @@ export const WorkTag = styled.div`
   color: black;
   position: absolute;
   top: 200px;
-  right: 150px;
+  right: 180px;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  @media only screen and (max-width: 1200px) {
+   
+    right: 100px;
+    }
+  @media only screen and (max-width: 950px) {
+  
+    }
+  @media only screen and (max-width: 768px) {
+   top:350px;
+    right: 300px;
+    }
+    @media only screen and (max-width: 650px) {
+      top:350px;
+       right: 100px;
+       }
 `;
 
 export const BoxTitle = styled.div`
@@ -297,30 +344,41 @@ const imageAnimation = keyframes`
   0% { transform: scale(1); }
   50% { transform: scale(1.2); }
   100% { transform: scale(1); }
-`
+`;
 
+export const StudiesImage = styled.img`
+  animation: ${imageAnimation} 5s infinite;
 
-
-export const StudiesImage=styled.img`
-
-
-animation: ${imageAnimation} 5s infinite;
-
-width:150px;
-height:150px;
-z-index:1;
-position:absolute;
-`
+  width: 150px;
+  height: 150px;
+  z-index: 10;
+  position: absolute;
+  @media only screen and (max-width: 1300px) {
+    width: 100px;
+    height: 100px;
+  }
+  @media only screen and (max-width: 768px) {
+   width:60px;
+   height:60px;
+  }
+`;
 
 export const ScrollContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-          scroll-snap-type: y mandatory;
+
+  scroll-snap-type: y mandatory;
   height: 100vh;
   margin: 0px;
 
-
+  @media only screen and (max-width: 1100px) {
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+    overflow-y: visible;
+    min-height: 100vh;
+    background-color: ${colors.green}
+  }
 `;
 
 export const FullSection = styled.section`
@@ -329,17 +387,33 @@ export const FullSection = styled.section`
   flex-shrink: 0;
   flex: 0 0 100%;
   scroll-snap-align: start;
-  position: relative; /* add this to make child element position absolute within this section */
+  position: relative; 
 
-
+  @media only screen and (max-width: 1100px) {
+    width: auto;
+    height: auto;
+  }
 `;
 
-export const Grid=styled.div`
-display:grid;
-justify-content:center;
-align-content:center;
-align-items:center;
-margin-top:50px;
-grid-template-columns:1fr 1fr 1fr;
-column-gap:200px;
-row-gap:200px;`
+export const Grid = styled.div`
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left:-50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 200px;
+  row-gap: 200px;
+  @media only screen and (max-width: 950px) {
+  
+    row-gap: 100px;
+    column-gap:100px;
+  }
+  @media only screen and (max-width: 768px) {
+row-gap:100px;  grid-template-columns: 1fr 1fr;
+
+
+    
+  }
+`;

@@ -25,18 +25,32 @@ import "aos/dist/aos.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "animate.css";
 import light from "../../assets/images/light.png";
-import loupe from "../../assets/images/loupe.png";
 import click from "../../assets/images/click.png";
 import computer3d from "../../assets/images/computer3d.png";
 import folder from "../../assets/images/folder.png";
 import stars from "../../assets/images/stars.png";
 import booky from "../../assets/images/booky.png";
 import colors from "../../theme/colors";
+import { useEffect, useState } from "react";
 
 type Props = { column?: boolean };
 
 const About = ({ column }: Props) => {
   Aos.init();
+  const [isMobile, setIsMobile] = useState(false)
+ 
+const handleResize = () => {
+  if (window.innerWidth < 720) {
+      setIsMobile(true)
+  } else {
+      setIsMobile(false)
+  }
+}
+
+useEffect(() => {
+  window.addEventListener("resize", handleResize)
+})
+
   return (
     <S.ScrollContainer>
       <S.FullSection style={{ backgroundColor: colors.green }}>
@@ -139,9 +153,9 @@ const About = ({ column }: Props) => {
 
       <S.FullSection style={{ backgroundColor: colors.purple_dark }}>
         <S.ThirdContainer>
+         
           <SectionTitle style={{ color: "white" }}>STUDIES</SectionTitle>
           <S.StudiesImage style={{ top: "400px", left: "25px" }} src={light} />
-          <S.StudiesImage style={{ top: "500px", left: "100px" }} src={loupe} />
           <S.StudiesImage style={{ top: "650px", left: "50px" }} src={stars} />
           <S.StudiesImage
             style={{ bottom: "100px", right: "50px" }}
@@ -152,8 +166,8 @@ const About = ({ column }: Props) => {
             src={computer3d}
           />
           <S.StudiesImage style={{ top: "60px", left: "20px" }} src={folder} />
-          <S.StudiesImage style={{ top: "300px", right: "90px" }} src={booky} />
-
+          <S.StudiesImage style={{  top: isMobile ? "366px" : "300px", right:isMobile ? "19px" : "90px"  }} src={booky} />
+       
           <S.StudiesContainer>
             <S.StudiesParagraph>
               🎓 I have four bachelor degrees: in Political Science, Sociology,
@@ -209,10 +223,9 @@ const About = ({ column }: Props) => {
               frontComponent={<S.LeisureImage src={theater} />}
               backComponent={
                 <S.LeisureText>
-                  I also play theater every week with a French-speaking Theater
-                  organization that I started back in January 2020. We have
-                  public representations twice a year (in French with Swedish
-                  subtitles).
+                  I play theater every week with a French-speaking Theater
+                  organization. We
+                  regularly have public representations.
                 </S.LeisureText>
               }
             />
