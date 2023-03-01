@@ -20,7 +20,7 @@ type StyledLinkProps = {
   active?:boolean
 };
 export const StyledLink = styled(NavLink)<StyledLinkProps>`
-  color: ${(props) => (props.name ? "white" : "#c9e895")};
+  color: ${(props) => (props.name ? "white" : colors.green_highlight)};
   font-size: ${(props) => (props.name ? 30 : 20)}px;
   text-decoration: none;
   margin: 0px 20px;
@@ -32,5 +32,6 @@ export const StyledLink = styled(NavLink)<StyledLinkProps>`
   }
    &.active {
     color: ${colors.pink};
+    font-weight:700;
   }
 `;

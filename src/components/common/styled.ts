@@ -99,8 +99,7 @@ export const Title = styled.p`
   font-weight: 900;
   letter-spacing: 5px;
   margin: 5px;
-  font-family: 'Libre Baskerville';
-  @media only screen and (max-width: 950px) {
+  font-family: "Walter Turncoat", cursive;  @media only screen and (max-width: 950px) {
     font-size: 55px;
   }
   @media only screen and (max-width: 768px) {
@@ -111,8 +110,28 @@ export const Title = styled.p`
 `;
 export const Paragraph = styled.div`
   font-size: 18px;
-  color: black;
+  color: black; 
   width: 70%;
+  @media screen and (max-width: 768px) {
+      font-size:15px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size:12px;
+    }
+  
+`;
+
+export const FrontParagraph = styled.div`
+  font-size: 18px;
+  color: black; 
+  width: 100%;
+  @media screen and (max-width: 950px) {
+      font-size:15px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size:12px;
+    }
+  
 `;
 
 export type LinkProps = { column?: boolean };
@@ -158,9 +177,13 @@ export const SectionTitle = styled.h1`
   justify-content:center;
   align-items:center;
   letter-spacing:5px;
+  font-family: "Walter Turncoat", cursive;
+  @media only screen and (max-width: 768px) {
+    margin-bottom:0px;
+  }
 `;
 
-export const Subtitle = styled.h1`
+export const Subtitle = styled.div`
   display: flex;
   font-size:20px;
   font-family: 'Libre Baskerville';
@@ -170,7 +193,6 @@ export const Subtitle = styled.h1`
   place-self:center;
   justify-content:center;
   align-items:center;
-  
   letter-spacing:5px;
 `;
 

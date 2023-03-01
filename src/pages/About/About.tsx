@@ -33,9 +33,8 @@ import booky from "../../assets/images/booky.png";
 import colors from "../../theme/colors";
 import { useEffect, useState } from "react";
 
-type Props = { column?: boolean };
 
-const About = ({ column }: Props) => {
+const About = () => {
   Aos.init();
   const [isMobile, setIsMobile] = useState(false)
  
@@ -53,7 +52,7 @@ useEffect(() => {
 
   return (
     <S.ScrollContainer>
-      <S.FullSection style={{ backgroundColor: colors.green }}>
+      <S.FullSection style={{ backgroundColor: colors.green_highlight }}>
         <Container>
           <TextContainer>
             <Column>
@@ -76,7 +75,7 @@ useEffect(() => {
                 <S.Link
                   href="https://www.linkedin.com/in/elodie-pradet/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer noopener"
                 >
                   {" "}
                   👩🏻‍💻 {"  "}https://www.linkedin.com/in/elodie-pradet/

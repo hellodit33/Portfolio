@@ -13,7 +13,6 @@ const CV = () => {
         <S.CVTitle>
           <>💼</> EXPERIENCES
         </S.CVTitle>
-
         <S.Container>
           <S.ColumnContainer>
             <S.MissionTitle>
@@ -28,7 +27,6 @@ const CV = () => {
                   back-end (TypeScript, ReactJS, React Native, NodeJS,
                   Firebase).{" "}
                 </S.Work>
-
                 <S.Work>
                   Redesigned the dashboard, created a queue line function
                   together with the team and released new versions of the app.
@@ -37,7 +35,6 @@ const CV = () => {
                 </S.Work>
               </div>
             </S.DateMission>
-
             <S.MissionTitle>
               Frontend Developer, Marketing & Editorial Manager at Hint,
               Stockholm
@@ -104,7 +101,8 @@ const CV = () => {
               <S.Date>July 2018 - August 2018</S.Date>
               <S.Work>
                 Journalist at the Swedish newspaper{" "}
-                <Link href="https://www.gp.se/av/Elodie%20Pradet">
+                <Link rel="noopener noreferrer"
+                target="_blank" href="https://www.gp.se/av/Elodie%20Pradet">
                   Göteborgs-Posten
                 </Link>
               </S.Work>
@@ -113,7 +111,8 @@ const CV = () => {
               <S.Date>January 2018 - May 2018</S.Date>
               <S.Work>
                 Journalist intern at{" "}
-                <Link href="https://www.svd.se/av/elodie-pradet">
+                <Link rel="noopener noreferrer"
+                target="_blank" href="https://www.svd.se/av/elodie-pradet">
                   Svenska Dagbladet
                 </Link>
               </S.Work>
@@ -122,10 +121,9 @@ const CV = () => {
               <S.Date>October 2017 - October 2019</S.Date>
               <S.Work>
                 Nordics correspondent at{" "}
-                <Link
-                  href="https://muckrack.com/elodie-pradet/articles
-"
-                >
+                <Link rel="noopener noreferrer"
+                target="_blank"
+                  href="https://muckrack.com/elodie-pradet/articles">
                   La Croix
                 </Link>
               </S.Work>
