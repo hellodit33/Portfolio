@@ -16,12 +16,11 @@ export const Nav = styled.nav`
   align-items: center;
   height: 70px;
   padding: 0 20px;
-
 `;
 
 type StyledLinkProps = {
   name?: boolean;
-  active?:boolean
+  active?: boolean;
 };
 export const StyledLink = styled(NavLink)<StyledLinkProps>`
   color: ${(props) => (props.name ? "white" : colors.green_highlight)};
@@ -31,16 +30,15 @@ export const StyledLink = styled(NavLink)<StyledLinkProps>`
   @media (max-width: 768px) {
     font-size: 15px;
     margin: 0px 10px;
-
   }
   &:hover {
     animation: jello;
     color: white;
     animation-duration: 2s;
   }
-   &.active {
+  &.active {
     color: ${colors.pink};
-    font-weight:700;
+    font-weight: 700;
   }
 `;
 
@@ -63,7 +61,7 @@ export const Menu = styled.ul`
   justify-content: flex-end;
   align-items: center;
   list-style: none;
-  color:white;
+  color: white;
 
   @media (max-width: 768px) {
     align-items: center;
@@ -71,21 +69,22 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItem = styled.li`
-margin: 0 10px;
+  margin: 0 10px;
 
-@media (max-width: 768px) {
-  margin: 10px 0;
-}
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
 `;
 
-export const ClosingIcon=styled.div`
-align-items: center;
-display:flex;
-margin-left: auto;
+export const ClosingIcon = styled.div`
+  align-items: center;
+  display: flex;
+  margin-left: auto;
   cursor: pointer;
 
-&:hover {
-  animation: jello;
-  color: white;
-  animation-duration: 2s;
-}`
+  &:hover {
+    animation: jello;
+    color: white;
+    animation-duration: 2s;
+  }
+`;

@@ -33,22 +33,21 @@ import booky from "../../assets/images/booky.png";
 import colors from "../../theme/colors";
 import { useEffect, useState } from "react";
 
-
 const About = () => {
   Aos.init();
-  const [isMobile, setIsMobile] = useState(false)
- 
-const handleResize = () => {
-  if (window.innerWidth < 768) {
-      setIsMobile(true)
-  } else {
-      setIsMobile(false)
-  }
-}
+  const [isMobile, setIsMobile] = useState(false);
 
-useEffect(() => {
-  window.addEventListener("resize", handleResize)
-})
+  const handleResize = () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
 
   return (
     <S.ScrollContainer>
@@ -152,7 +151,6 @@ useEffect(() => {
 
       <S.FullSection style={{ backgroundColor: colors.purple_dark }}>
         <S.ThirdContainer>
-         
           <SectionTitle style={{ color: "white" }}>STUDIES</SectionTitle>
           <S.StudiesImage style={{ top: "400px", left: "25px" }} src={light} />
           <S.StudiesImage style={{ top: "650px", left: "50px" }} src={stars} />
@@ -165,8 +163,14 @@ useEffect(() => {
             src={computer3d}
           />
           <S.StudiesImage style={{ top: "60px", left: "20px" }} src={folder} />
-          <S.StudiesImage style={{  top: isMobile ? "366px" : "300px", right:isMobile ? "19px" : "90px"  }} src={booky} />
-       
+          <S.StudiesImage
+            style={{
+              top: isMobile ? "366px" : "300px",
+              right: isMobile ? "19px" : "90px",
+            }}
+            src={booky}
+          />
+
           <S.StudiesContainer>
             <S.StudiesParagraph>
               🎓 I have four bachelor degrees: in Political Science, Sociology,
@@ -223,8 +227,7 @@ useEffect(() => {
               backComponent={
                 <S.LeisureText>
                   I play theater every week with a French-speaking Theater
-                  organization. We
-                  regularly have public representations.
+                  organization. We regularly have public representations.
                 </S.LeisureText>
               }
             />

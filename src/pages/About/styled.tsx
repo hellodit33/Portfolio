@@ -156,9 +156,9 @@ export const StudiesParagraph = styled.div`
     margin-top: 1em;
     background-color: ${colors.pink};
     height: fit-content;
-    @media only screen and (max-width:950px) {
-      margin:0px;
-      margin-right:-5em;
+    @media only screen and (max-width: 950px) {
+      margin: 0px;
+      margin-right: -5em;
     }
   }
 
@@ -171,9 +171,9 @@ export const StudiesParagraph = styled.div`
     @media only screen and (max-width: 950px) {
       margin-top: -10em;
     }
-    @media only screen and (max-width:950px) {
-      margin:-1em;
-      margin-left:-5em;
+    @media only screen and (max-width: 950px) {
+      margin: -1em;
+      margin-left: -5em;
     }
   }
 
@@ -182,9 +182,9 @@ export const StudiesParagraph = styled.div`
     margin-left: -4em;
     background-color: ${colors.purple};
     height: fit-content;
-    @media only screen and (max-width:950px) {
-      margin:-1em;
-      margin-right:-5em;
+    @media only screen and (max-width: 950px) {
+      margin: -1em;
+      margin-right: -5em;
     }
   }
 
@@ -194,10 +194,9 @@ export const StudiesParagraph = styled.div`
     background-color: ${colors.green};
     height: fit-content;
     @media only screen and (max-width: 950px) {
-      margin:-1em;
-      margin-left:-5em;
+      margin: -1em;
+      margin-left: -5em;
     }
-    
   }
 
   @media only screen and (max-width: 1100px) {
@@ -210,7 +209,7 @@ export const StudiesParagraph = styled.div`
   @media only screen and (max-width: 1100px) {
     display: flex;
     flex-direction: column;
-    width:45%;
+    width: 45%;
   }
 `;
 
@@ -235,8 +234,8 @@ export const StudiesContainer = styled.div`
     margin: -1em 23em;
   }
   @media only screen and (max-width: 1100px) {
-    margin:0px;
-    margin-top:10px;
+    margin: 0px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     place-self: center;
@@ -267,7 +266,6 @@ export const LeisureImage = styled.img`
     width: 140px;
     height: 140px;
   }
-  
 `;
 export const LeisureText = styled.p`
   width: 180px;
@@ -290,7 +288,6 @@ export const LeisureText = styled.p`
     width: 120px;
     height: 120px;
   }
- 
 `;
 export const Section = styled.div`
   display: grid;
@@ -318,20 +315,18 @@ export const WorkTag = styled.div`
   right: 180px;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
   @media only screen and (max-width: 1200px) {
-   
     right: 100px;
-    }
+  }
   @media only screen and (max-width: 950px) {
-  
-    }
+  }
   @media only screen and (max-width: 768px) {
-   top:350px;
+    top: 350px;
     right: 300px;
-    }
-    @media only screen and (max-width: 650px) {
-      top:350px;
-       right: 100px;
-       }
+  }
+  @media only screen and (max-width: 650px) {
+    top: 350px;
+    right: 100px;
+  }
 `;
 
 export const BoxTitle = styled.div`
@@ -358,8 +353,8 @@ export const StudiesImage = styled.img`
     height: 100px;
   }
   @media only screen and (max-width: 768px) {
-   width:60px;
-   height:60px;
+    width: 60px;
+    height: 60px;
   }
 `;
 
@@ -377,7 +372,7 @@ export const ScrollContainer = styled.div`
     overflow-x: hidden;
     overflow-y: visible;
     min-height: 100vh;
-    background-color: ${colors.green}
+    background-color: ${colors.green};
   }
 `;
 
@@ -387,7 +382,7 @@ export const FullSection = styled.section`
   flex-shrink: 0;
   flex: 0 0 100%;
   scroll-snap-align: start;
-  position: relative; 
+  position: relative;
 
   @media only screen and (max-width: 1100px) {
     width: auto;
@@ -401,19 +396,16 @@ export const Grid = styled.div`
   align-content: center;
   align-items: center;
   margin-top: 50px;
-  margin-left:-50px;
+  margin-left: -50px;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 200px;
   row-gap: 200px;
   @media only screen and (max-width: 950px) {
-  
     row-gap: 100px;
-    column-gap:100px;
+    column-gap: 100px;
   }
   @media only screen and (max-width: 768px) {
-row-gap:100px;  grid-template-columns: 1fr 1fr;
-
-
-    
+    row-gap: 100px;
+    grid-template-columns: 1fr 1fr;
   }
 `;

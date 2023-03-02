@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 type FlexDivProps = {
-    end?: boolean
-}
+  end?: boolean;
+};
 
 export const Container = styled.div<FlexDivProps>`
-    display:flex;
-    flex-direction:row;
-    justify-content: ${(props) => props.end && 'flex-end'}
-`
+  display: flex;
+  flex-direction: row;
+  justify-content: ${(props) => props.end && "flex-end"};
+`;

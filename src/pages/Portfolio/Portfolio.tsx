@@ -34,20 +34,19 @@ import lillaateljenlogo from "../../assets/images/lillaateljenlogo.png";
 import dags from "../../assets/images/dags.png";
 
 const Portfolio = () => {
+  const [isSmallMobile, setIsSmallMobile] = useState(false);
 
-  const [isSmallMobile, setIsSmallMobile] = useState(false)
- 
   const handleResize = () => {
     if (window.innerWidth < 365) {
-        setIsSmallMobile(true)
+      setIsSmallMobile(true);
     } else {
-        setIsSmallMobile(false)
+      setIsSmallMobile(false);
     }
-  }
-  
+  };
+
   useEffect(() => {
-    window.addEventListener("resize", handleResize)
-  })
+    window.addEventListener("resize", handleResize);
+  });
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleSectionButtonClick = (section: number) => {
@@ -76,7 +75,7 @@ const Portfolio = () => {
           <S.First>
             <S.WorkContainer>
               <Subtitle>Work</Subtitle>
-             {!isSmallMobile && <Space />}
+              {!isSmallMobile && <Space />}
 
               <S.WorkImage
                 onClick={() => handleSectionButtonClick(1)}
@@ -561,22 +560,16 @@ const Portfolio = () => {
               <FrontParagraph>
                 In a group work, I worked on the backend of a CRUD app called
                 Tripshare. The idea behind Tripshare is an idea I've had for a
-                startup project.
-                
-               
-            
-                This website lets tourists post and find shared car trips in
-                Iceland. The API is built on Strapi and the CMS used for writers
-                is Wordpress.
+                startup project. This website lets tourists post and find shared
+                car trips in Iceland. The API is built on Strapi and the CMS
+                used for writers is Wordpress.
                 <S.Link
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/hellodit33/Tripshare-Wordpress-Strapi-API"
-              >
-                <S.LinkImage src={github} />
-              </S.Link>
-
-             
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://github.com/hellodit33/Tripshare-Wordpress-Strapi-API"
+                >
+                  <S.LinkImage src={github} />
+                </S.Link>
               </FrontParagraph>
             </S.FrontGrid>
           </S.FirstFrontWrapper>
@@ -591,23 +584,19 @@ const Portfolio = () => {
               >
                 <S.LinkImage src={github} />
               </S.Link>
-             
-              {!isSmallMobile && <Space />}
-              I finished Colt Steele's course The Web Development
-              Bootcamp on Udemy with the YelpCamp project.
+              {!isSmallMobile && <Space />}I finished Colt Steele's course The
+              Web Development Bootcamp on Udemy with the YelpCamp project.
               <S.Link
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://github.com/hellodit33?tab=repositories"
               >
                 <S.LinkImage src={github} />
-                
               </S.Link>
-              <Space/>
-
+              <Space />
               In group work, I worked on a React E-commerce website (with SASS).
               The fictional goal was to sell giftcards.
-              <Space/>
+              <Space />
               <S.Link
                 rel="noopener noreferrer"
                 target="_blank"
@@ -615,26 +604,21 @@ const Portfolio = () => {
               >
                 <S.LinkImage alt="github" src={github} />
               </S.Link>
-
-{!isSmallMobile && <Space />}
-           
-              For a UX course I made a 
+              {!isSmallMobile && <Space />}
+              For a UX course I made a
               <S.Link
                 rel="noopener noreferrer"
-                target="_blank" 
+                target="_blank"
                 href="https://www.figma.com/proto/t16uDNox64VgMqKvGYPU0n/Prototype?node-id=2%3A8&starting-point-node-id=2%3A8"
               >
                 <S.LinkImage alt="figma" src={figma} />
               </S.Link>
-
-              
-                 prototype
-             
-              after user research. The fictional client was a dark kitchen so
-              every meal would come from one restaurant. I chose to focus on a
-              healthy food app because user research proved needs in this area.
+              prototype after user research. The fictional client was a dark
+              kitchen so every meal would come from one restaurant. I chose to
+              focus on a healthy food app because user research proved needs in
+              this area.
             </FrontParagraph>
-            </S.SecondFrontWrapper>
+          </S.SecondFrontWrapper>
         </S.WrapperFrontContainer>
       ),
     },

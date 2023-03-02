@@ -38,41 +38,34 @@ export const WrapperContainer = styled.div`
   margin-top: 100px;
   justify-content: center;
   align-items: center;
-  column-gap:50px;
+  column-gap: 50px;
 
   @media screen and (max-width: 1200px) {
     margin-left: 20px;
     margin-top: 70px;
-
   }
   @media screen and (max-width: 768px) {
     grid-template-rows: 1fr auto;
-    grid-template-columns:1fr;
-    row-gap:20px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
   }
 `;
 export const WrapperFrontContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-content:center;
-  margin:30px;
-
-  margin-top:100px;
+  align-content: center;
+  margin: 30px;
+  margin-top: 100px;
   justify-content: center;
   align-items: center;
-  gap:30px;
+  gap: 30px;
 
   @media screen and (max-width: 950px) {
-    margin-top:60px;
-
+    margin-top: 70px;
     grid-template-rows: 1fr auto;
-    grid-template-columns:1fr;
-    row-gap:20px;
-
-
-
+    grid-template-columns: 1fr;
+    row-gap: 20px;
   }
-  
 `;
 
 export const FirstWrapper = styled.div`
@@ -86,13 +79,12 @@ export const FirstWrapper = styled.div`
 export const FirstFrontWrapper = styled.div`
   display: grid;
   grid-template-rows: 1fr 0.5fr;
-  align-self:center;
+  align-self: center;
   @media screen and (max-width: 1100px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
 `;
-
 
 export const NotesWrapper = styled.div`
   display: flex;
@@ -103,7 +95,7 @@ export const NotesWrapper = styled.div`
   align-items: center;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
   @media screen and (max-width: 768px) {
-    font-size:13px;
+    font-size: 13px;
   }
 `;
 export const Image = styled.img`
@@ -132,8 +124,8 @@ export const Image = styled.img`
 `;
 
 export const FrontImage = styled.img`
-width: 500px;
-height: 250px;
+  width: 500px;
+  height: 250px;
   border-radius: 30px;
   border: 1px solid white;
   margin: 10px 0px;
@@ -203,12 +195,13 @@ export const Link = styled.a`
 `;
 
 export const LinkImage = styled.img`
-width:fit-content;
-height:40px;
-@media screen and (max-width: 768px) {
-  width:fit-content;
-  height:30px;
-}`
+  width: fit-content;
+  height: 40px;
+  @media screen and (max-width: 768px) {
+    width: fit-content;
+    height: 30px;
+  }
+`;
 export const Section = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -222,12 +215,13 @@ export const Section = styled.div`
   }
 `;
 
-export const LinkContainer=styled.div`display:flex;
-flex-direction:column;
-align-content:center;
-justify-content:center;
-align-items:center;
-`
+export const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const CardsContainer = styled.div`
   display: grid;
@@ -275,7 +269,6 @@ export const ProjectTitle = styled.div`
   font-size: 30px;
   @media screen and (max-width: 768px) {
     font-size: 20px;
-
   }
 `;
 
@@ -390,33 +383,32 @@ export const TechStackList = styled.ul`
   }
 `;
 
-export const TechListTitle=styled.div`
-text-decoration:underline;`
+export const TechListTitle = styled.div`
+  text-decoration: underline;
+`;
 export const TechListItem = styled.li`
   display: block;
   line-height: 1.001em;
   color: #37373c;
 `;
 
-export const SecondWrapper=styled.div`    
-width: fit-content;
-gap: 20px;
-display: flex;
-flex-direction: column;
-    align-items: center;
-@media screen and (max-width: 768px) {
-  flex-direction: row;
-}
-`
-export const SecondFrontWrapper=styled.div`    
-gap: 20px;
-display: flex;
-flex-direction: column;
-@media screen and (max-width: 768px) {
-  flex-direction: row;
-}
-`
+export const SecondWrapper = styled.div`
+  width: fit-content;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+  }
+`;
+export const SecondFrontWrapper = styled.div`
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+  }
+`;
 
-export const FrontGrid=styled.div`
-
-`
+export const FrontGrid = styled.div``;

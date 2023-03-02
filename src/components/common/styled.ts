@@ -12,11 +12,11 @@ export const Space = styled.div<SpaceProps>`
 `;
 
 export const Container = styled.div`
-display:flex;
-flex-direction:column;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   column-gap: 0px;
   margin: 0px 200px 0px 200px;
   @media only screen and (max-width: 950px) {
@@ -25,7 +25,6 @@ flex-direction:column;
   @media only screen and (max-width: 768px) {
     margin: 30px;
   }
-
 `;
 
 export const IntroContainer = styled.div`
@@ -35,17 +34,16 @@ export const IntroContainer = styled.div`
   flex-direction: column;
   color: black;
 `;
+
 export const TextContainer = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
   color: black;
   justify-content: center;
   @media only screen and (max-width: 768px) {
-   display: flex;
-   flex-direction:column-reverse;
-
-
-
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 10px;
   }
 `;
 
@@ -53,21 +51,18 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  
 `;
 
 export const ColumnLinks = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   @media only screen and (max-width: 768px) {
-   display:flex;
-   flex-direction:row;
-   justify-content:flex-start;
-
-   }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 `;
 export const Image = styled.img`
   position: relative;
@@ -79,19 +74,16 @@ export const Image = styled.img`
 
   @media only screen and (max-width: 950px) {
     width: 400px;
-    height:380px;
+    height: 380px;
   }
   @media only screen and (max-width: 768px) {
     width: 300px;
-    height:280px;
+    height: 280px;
   }
   @media only screen and (max-width: 300px) {
     width: 200px;
-    height:180px;
- 
- 
- 
-   }
+    height: 180px;
+  }
 `;
 
 export const Title = styled.p`
@@ -100,39 +92,36 @@ export const Title = styled.p`
   font-weight: 900;
   letter-spacing: 5px;
   margin: 5px;
-  font-family: "Walter Turncoat", cursive;  @media only screen and (max-width: 950px) {
+  font-family: "Walter Turncoat", cursive;
+  @media only screen and (max-width: 950px) {
     font-size: 55px;
   }
   @media only screen and (max-width: 768px) {
     font-size: 40px;
   }
-
-
 `;
 export const Paragraph = styled.div`
   font-size: 18px;
-  color: black; 
+  color: black;
   width: 70%;
   @media screen and (max-width: 768px) {
-      font-size:15px;
-    }
-    @media screen and (max-width: 375px) {
-      font-size:12px;
-    }
-  
+    font-size: 15px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 export const FrontParagraph = styled.div`
   font-size: 18px;
-  color: black; 
+  color: black;
   width: 100%;
   @media screen and (max-width: 950px) {
-      font-size:15px;
-    }
-    @media screen and (max-width: 375px) {
-      font-size:12px;
-    }
-  
+    font-size: 15px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 export type LinkProps = { column?: boolean };
@@ -161,7 +150,6 @@ export const Section = styled.div`
   .fp-overflow {
     overflow-y: visible;
   }
- 
 
   .fp-watermark {
     display: none;
@@ -201,7 +189,7 @@ export const ScrollContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-          scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
   height: 100vh;
   margin: 0px;
   @media only screen and (max-width: 1100px) {
@@ -209,9 +197,8 @@ export const ScrollContainer = styled.div`
     overflow-x: hidden;
     overflow-y: visible;
     min-height: 100vh;
-    background-color: ${colors.green_highlight}
+    background-color: ${colors.green_highlight};
   }
-
 `;
 export const FullSection = styled.section`
   width: 100vw;
@@ -219,6 +206,4 @@ export const FullSection = styled.section`
   flex-shrink: 0;
   flex: 0 0 100%;
   scroll-snap-align: start;
-
-
 `;

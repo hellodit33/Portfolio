@@ -5,6 +5,7 @@ import cv from "../../assets/cv.pdf";
 import cvsvenska from "../../assets/cvsvenska.pdf";
 import "animate.css";
 import { Link } from "../Portfolio/styled";
+import { Space } from "../../components/common/styled";
 
 const CV = () => {
   return (
@@ -101,8 +102,11 @@ const CV = () => {
               <S.Date>July 2018 - August 2018</S.Date>
               <S.Work>
                 Journalist at the Swedish newspaper{" "}
-                <Link rel="noopener noreferrer"
-                target="_blank" href="https://www.gp.se/av/Elodie%20Pradet">
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.gp.se/av/Elodie%20Pradet"
+                >
                   Göteborgs-Posten
                 </Link>
               </S.Work>
@@ -111,8 +115,11 @@ const CV = () => {
               <S.Date>January 2018 - May 2018</S.Date>
               <S.Work>
                 Journalist intern at{" "}
-                <Link rel="noopener noreferrer"
-                target="_blank" href="https://www.svd.se/av/elodie-pradet">
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.svd.se/av/elodie-pradet"
+                >
                   Svenska Dagbladet
                 </Link>
               </S.Work>
@@ -121,9 +128,11 @@ const CV = () => {
               <S.Date>October 2017 - October 2019</S.Date>
               <S.Work>
                 Nordics correspondent at{" "}
-                <Link rel="noopener noreferrer"
-                target="_blank"
-                  href="https://muckrack.com/elodie-pradet/articles">
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://muckrack.com/elodie-pradet/articles"
+                >
                   La Croix
                 </Link>
               </S.Work>
@@ -267,6 +276,7 @@ const CV = () => {
           <S.CvLink href={cvsvenska} download>
             Download CV in Swedish
           </S.CvLink>
+          <Space />
         </S.CvSection>
       </S.FullSection>
     </S.ScrollContainer>

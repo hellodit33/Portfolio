@@ -13,7 +13,6 @@ export const Container = styled.div`
     row-gap: 20px;
     margin: 30px;
   }
- 
 `;
 
 export const ColumnContainer = styled.div`
