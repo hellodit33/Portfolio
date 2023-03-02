@@ -412,3 +412,109 @@ export const SecondFrontWrapper = styled.div`
 `;
 
 export const FrontGrid = styled.div``;
+
+const fadein = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const arrowbounce = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+export const ArrowWrapper = styled.div`
+  animation: ${fadein} 0.5s ease-in-out 3s forwards;
+`;
+
+export const ArrowIcon = styled.div`
+  cursor: pointer;
+  height: 10px;
+  right: 1%;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  animation: ${arrowbounce} 1s ease-in-out infinite;
+
+  @media screen and (max-width: 950px) {
+    width: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 10px;
+  }
+`;
+export const ArrowIconTop = styled.div`
+  background-color: #666;
+  height: 4px;
+  left: -5px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  $transition-time: 0.15s;
+
+  &:after {
+    background-color: #fff;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all $transition-time;
+  }
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+
+  &:after {
+    left: 100%;
+    right: 0;
+    transition-delay: 0s;
+    &:hover {
+      left: 0;
+      transition-delay: $transition-time;
+    }
+  }
+`;
+
+export const ArrowIconBottom = styled.div`
+  background-color: #666;
+  height: 4px;
+  left: -5px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+  &:after {
+    background-color: #fff;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all $transition-time;
+  }
+
+  transform: rotate(-45deg);
+  transform-origin: top right;
+
+  &:after {
+    left: 0;
+    right: 100%;
+    transition-delay: $transition-time;
+
+    &:hover {
+      left: 0;
+      transition-delay: $transition-time;
+    }
+  }
+`;

@@ -40,10 +40,11 @@ export const TextContainer = styled.div`
   grid-template-columns: 3fr 2fr;
   color: black;
   justify-content: center;
+  align-items: center;
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
-    margin-left: 10px;
+    align-items: flex-start;
   }
 `;
 
@@ -93,7 +94,7 @@ export const Title = styled.p`
   letter-spacing: 5px;
   margin: 5px;
   font-family: "Walter Turncoat", cursive;
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 1200px) {
     font-size: 55px;
   }
   @media only screen and (max-width: 768px) {
@@ -206,4 +207,48 @@ export const FullSection = styled.section`
   flex-shrink: 0;
   flex: 0 0 100%;
   scroll-snap-align: start;
+`;
+
+export const ArrowContainer = styled.div`
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+`;
+
+export const ArrowContent = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -50%);
+`;
+
+export const Arrows = styled.div`
+  width: 75px;
+  height: 65px;
+  &:hover {
+    polygon {
+      fill: #fff;
+      transition: all 0.2s ease-out;
+
+      &.arrow-bottom {
+        transform: translateY(-18px);
+      }
+
+      &.arrow-top {
+        transform: translateY(18px);
+      }
+    }
+  }
+  polygon {
+    fill: #fff;
+    transition: all 0.2s ease-out;
+
+    &.arrow-middle {
+      opacity: 0.75;
+    }
+
+    &.arrow-top {
+      opacity: 0.5;
+    }
+  }
 `;

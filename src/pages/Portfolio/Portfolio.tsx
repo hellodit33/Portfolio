@@ -35,6 +35,7 @@ import dags from "../../assets/images/dags.png";
 
 const Portfolio = () => {
   const [isSmallMobile, setIsSmallMobile] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleResize = () => {
     if (window.innerWidth < 365) {
@@ -47,6 +48,16 @@ const Portfolio = () => {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   });
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleSectionButtonClick = (section: number) => {
@@ -63,6 +74,8 @@ const Portfolio = () => {
     }
   };
 
+
+ 
   let content = [
     {
       title: "My works",
@@ -146,6 +159,16 @@ const Portfolio = () => {
               </S.ProjectsContainer>
             </div>
           </S.First>
+          
+
+  {isVisible &&
+   
+      
+      <S.ArrowIcon>
+        <S.ArrowIconTop></S.ArrowIconTop>
+        <S.ArrowIconBottom></S.ArrowIconBottom>
+        </S.ArrowIcon >
+      }
         </S.MainWrapper>
       ),
     },
@@ -341,7 +364,6 @@ const Portfolio = () => {
             <S.NotesWrapper>
               <S.TechStackList>
                 <S.TechListTitle>Tech Stack: </S.TechListTitle>
-
                 <S.TechListItem>React Native</S.TechListItem>
                 <S.TechListItem>JavaScript</S.TechListItem>
                 <S.TechListItem>NodeJS</S.TechListItem>

@@ -5,7 +5,12 @@ import cv from "../../assets/cv.pdf";
 import cvsvenska from "../../assets/cvsvenska.pdf";
 import "animate.css";
 import { Link } from "../Portfolio/styled";
-import { Space } from "../../components/common/styled";
+import {
+  ArrowContainer,
+  ArrowContent,
+  Arrows,
+  Space,
+} from "../../components/common/styled";
 
 const CV = () => {
   return (
@@ -139,6 +144,26 @@ const CV = () => {
             </S.DateMission>
           </S.ColumnContainer>
         </S.Container>
+        <ArrowContainer>
+          <ArrowContent>
+            <Arrows>
+              <svg viewBox="0 0 60 48">
+                <polygon
+                  className="arrow-top"
+                  points="28.2,18.6 1.1,1.1 1.6,0 28.2,16.9 54.8,0 55.4,1.1"
+                />
+                <polygon
+                  className="arrow-middle"
+                  points="28.2,28.9 0.7,12.2 2.2,10.6 28.2,24.6 54.1,10.6 55.6,12.2"
+                />
+                <polygon
+                  className="arrow-bottom"
+                  points="28.2,39.3 0,22.3 3,20.1 28.2,34.3 54.3,20.1 57.3,22.3"
+                />
+              </svg>
+            </Arrows>
+          </ArrowContent>
+        </ArrowContainer>
       </S.FullSection>
       <S.FullSection className="section">
         <S.CVTitle>
