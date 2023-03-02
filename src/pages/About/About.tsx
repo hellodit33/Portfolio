@@ -63,7 +63,7 @@ const About = () => {
               </Title>
               <Paragraph>
                 I'm a front-end developer with a background in journalism. I'm
-                working as a Frontend Developer at Redmind, a technology and
+                working as a Software Developer at Redmind, a technology and
                 venture studio based in Stockholm.
               </Paragraph>
               <Paragraph>
@@ -84,9 +84,10 @@ const About = () => {
             <ColumnLinks>
               <div>
                 <Image src={profilepic} />
-                <S.WorkTag className="animate__animated animate__backInDown animate__delay-1s">
-                  Get in touch!
+                <S.WorkTag>
+                <S.Link href="mailto:pradetelodie@gmail.com"> Get in touch! </S.Link>
                 </S.WorkTag>
+               
               </div>
               <LinkContainer column>
                 <LinkList>

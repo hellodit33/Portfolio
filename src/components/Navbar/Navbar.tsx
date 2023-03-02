@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import * as S from "./styled";
 
-type Props = {
-  name?: boolean;
-};
 
-const Navbar = ({}: Props) => {
+
+const Navbar = () => {
   const location = useLocation();
 
   const isActiveLink = (pathname: string) => {

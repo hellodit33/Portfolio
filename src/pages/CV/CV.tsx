@@ -17,12 +17,12 @@ const CV = () => {
         <S.Container>
           <S.ColumnContainer>
             <S.MissionTitle>
-              Frontend Developer at Redmind, Stockholm
+              Software Developer at Redmind, Stockholm
             </S.MissionTitle>
             <S.DateMission>
               <S.Date>November 2022 - Present </S.Date>
               <div>
-                <S.Work>Frontend Developer.</S.Work>
+                <S.Work>Software Developer.</S.Work>
                 <S.Work>
                   Client: Moveat - website, dashboard & app, front-end and
                   back-end (TypeScript, ReactJS, React Native, NodeJS,
@@ -148,7 +148,7 @@ const CV = () => {
 
         <S.Container>
           <S.ColumnContainer>
-            <S.MissionTitle>Frontend Developer</S.MissionTitle>
+            <S.MissionTitle>Frontend Development</S.MissionTitle>
             <S.DateMission>
               <S.Date>September 2021 - May 2023 </S.Date>
               <div>

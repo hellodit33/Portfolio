@@ -327,6 +327,10 @@ export const WorkTag = styled.div`
     top: 350px;
     right: 100px;
   }
+  &:hover {
+    animation: jello;
+    animation-duration: 2s;
+  }
 `;
 
 export const BoxTitle = styled.div`

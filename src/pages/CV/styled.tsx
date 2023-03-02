@@ -24,14 +24,12 @@ export const ColumnContainer = styled.div`
 export const CVTitle = styled.div`
   font-size: 25px;
   display: flex;
-  align-items: center;
   margin-top: 100px;
   margin-left: 100px;
-  justify-self: center;
   line-height: 20px;
   @media only screen and (max-width: 1100px) {
     font-size: 20px;
-    justify-self: flex-start;
+    margin-left: 30px;
   }
 `;
 export const MissionTitle = styled.h3`
