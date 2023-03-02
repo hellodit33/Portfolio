@@ -10,9 +10,13 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const Nav = styled.div`
-  margin-right: 40px;
-  margin: 20px 50px;
+export const Nav = styled.nav`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+
 `;
 
 type StyledLinkProps = {
@@ -24,7 +28,11 @@ export const StyledLink = styled(NavLink)<StyledLinkProps>`
   font-size: ${(props) => (props.name ? 30 : 20)}px;
   text-decoration: none;
   margin: 0px 20px;
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin: 0px 10px;
 
+  }
   &:hover {
     animation: jello;
     color: white;
@@ -35,3 +43,49 @@ export const StyledLink = styled(NavLink)<StyledLinkProps>`
     font-weight:700;
   }
 `;
+
+export const HamburgerIcon = styled.div`
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+  &:hover {
+    animation: jello;
+    color: white;
+    animation-duration: 2s;
+  }
+`;
+
+export const Menu = styled.ul`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  color:white;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+`;
+
+export const MenuItem = styled.li`
+margin: 0 10px;
+
+@media (max-width: 768px) {
+  margin: 10px 0;
+}
+`;
+
+export const ClosingIcon=styled.div`
+align-items: center;
+display:flex;
+margin-left: auto;
+  cursor: pointer;
+
+&:hover {
+  animation: jello;
+  color: white;
+  animation-duration: 2s;
+}`

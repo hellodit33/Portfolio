@@ -13,8 +13,7 @@ export default {
     hint: "#d7bdfb",
     bookclub: "#9b5d64",
     fridge: "#a1c2fc", 
-    lilla:"#b8ad96",
+    dark_beige:"#b8ad96",
     dags:'#f7f7fd',
     beige: "#fefae0"
-
   }

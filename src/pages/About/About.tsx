@@ -39,7 +39,7 @@ const About = () => {
   const [isMobile, setIsMobile] = useState(false)
  
 const handleResize = () => {
-  if (window.innerWidth < 720) {
+  if (window.innerWidth < 768) {
       setIsMobile(true)
   } else {
       setIsMobile(false)

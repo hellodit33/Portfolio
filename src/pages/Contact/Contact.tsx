@@ -21,7 +21,7 @@ const Contact = () => {
         <S.WrapperContainer>
           <div>
             <Title>
-              Get in<br></br>touch with me!
+              Get in touch with me 📨
             </Title>
             <Space />
             <Paragraph>Would you like to get in contact with me?</Paragraph>

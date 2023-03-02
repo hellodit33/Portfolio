@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../theme/colors";
 
 type SpaceProps = {
   x?: number;
@@ -203,7 +204,13 @@ export const ScrollContainer = styled.div`
           scroll-snap-type: y mandatory;
   height: 100vh;
   margin: 0px;
-
+  @media only screen and (max-width: 1100px) {
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+    overflow-y: visible;
+    min-height: 100vh;
+    background-color: ${colors.green_highlight}
+  }
 
 `;
 export const FullSection = styled.section`

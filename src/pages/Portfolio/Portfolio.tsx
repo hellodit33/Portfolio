@@ -418,7 +418,7 @@ const Portfolio = () => {
     },
     {
       title: "Lilla Ateljen",
-      color: colors.lilla,
+      color: colors.dark_beige,
 
       section: 5,
 
