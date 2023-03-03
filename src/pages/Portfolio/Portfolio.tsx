@@ -45,6 +45,13 @@ const Portfolio = () => {
     }
   };
 
+  const handleArrowClick = () => {
+    const nextSlide = document.getElementById("next-slide");
+    if(nextSlide !== null) {
+    nextSlide.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   });
@@ -56,7 +63,6 @@ const Portfolio = () => {
 
     return () => clearTimeout(timeout);
   }, []);
-
 
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -74,8 +80,6 @@ const Portfolio = () => {
     }
   };
 
-
- 
   let content = [
     {
       title: "My works",
@@ -159,16 +163,12 @@ const Portfolio = () => {
               </S.ProjectsContainer>
             </div>
           </S.First>
-          
-
-  {isVisible &&
-   
-      
-      <S.ArrowIcon>
-        <S.ArrowIconTop></S.ArrowIconTop>
-        <S.ArrowIconBottom></S.ArrowIconBottom>
-        </S.ArrowIcon >
-      }
+          {isVisible && (
+            <S.ArrowIcon onClick={handleArrowClick}>
+              <S.ArrowIconTop></S.ArrowIconTop>
+              <S.ArrowIconBottom></S.ArrowIconBottom>
+            </S.ArrowIcon>
+          )}
         </S.MainWrapper>
       ),
     },
@@ -177,7 +177,7 @@ const Portfolio = () => {
       color: colors.moveat,
       section: 1,
       body: (
-        <S.WrapperContainer>
+        <S.WrapperContainer  id="next-slide">
           <S.FirstWrapper>
             <div>
               <S.ProjectTitle>Moveat</S.ProjectTitle>
@@ -267,8 +267,8 @@ const Portfolio = () => {
               recipes, and filter recipes upon allergies, diets, occasions and
               type of meal.
               <Space />
-              The UX was made in group at school, and I coded the app's backend
-              and frontend on my own.
+              The UX was a group work at school, and I developed the app's
+              backend and frontend on my own.
             </Paragraph>
           </S.FirstWrapper>
           <S.SecondWrapper>
@@ -332,7 +332,7 @@ const Portfolio = () => {
             <div>
               <Paragraph style={{ color: "white" }}>
                 I'm developing an app for my two different bookclubs (React
-                Native).
+                Native, NodeJS, MongoDB).
                 <Space />
                 It will be possible to log the next bookclub book and rate it,
                 create the bookclub event with maps and time, chat between
@@ -392,10 +392,15 @@ const Portfolio = () => {
               <Paragraph>
                 As I worked for the streaming recommendation startup Hint and
                 studied Frontend, I developed a{" "}
-                <S.Link href="https://hint-onboarding-app.herokuapp.com">
-                  MERN CRUD website
+                <S.Link
+                  href="https://hint-onboarding-app.herokuapp.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  website
                 </S.Link>{" "}
-                to onboard people on the streaming discovery platform.
+                (React, MongoDB, NodeJS) to onboard people on the streaming
+                discovery platform.
                 <Space />
                 The users can share their streaming recommendations to their
                 friends on a feed, add pictures and links, edit their profile,
@@ -566,7 +571,6 @@ const Portfolio = () => {
         </S.WrapperContainer>
       ),
     },
-
     {
       title: "First Front-end Projects",
       color: "white",

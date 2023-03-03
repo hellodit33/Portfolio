@@ -214,7 +214,7 @@ export const ArrowContainer = styled.div`
   padding: 20px;
   text-align: center;
   @media only screen and (max-width: 1100px) {
-    display:none;
+    display: none;
   }
 `;
 

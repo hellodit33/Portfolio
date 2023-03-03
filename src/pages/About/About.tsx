@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   ArrowContainer,
   ArrowContent,
@@ -23,8 +24,6 @@ import computer from "../../assets/images/computer.png";
 import tomat from "../../assets/images/tomat.png";
 import book from "../../assets/images/book.png";
 import ReactFlipCard from "reactjs-flip-card";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "animate.css";
 import light from "../../assets/images/light.png";
@@ -34,11 +33,13 @@ import folder from "../../assets/images/folder.png";
 import stars from "../../assets/images/stars.png";
 import booky from "../../assets/images/booky.png";
 import colors from "../../theme/colors";
-import { useEffect, useState } from "react";
 
 const About = () => {
-  Aos.init();
   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -48,9 +49,12 @@ const About = () => {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
+  const handleArrowClick = () => {
+    const nextSlide = document.getElementById("next-slide");
+    if(nextSlide !== null) {
+    nextSlide.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <S.ScrollContainer>
@@ -99,6 +103,7 @@ const About = () => {
                   <Links
                     href="https://www.linkedin.com/in/elodie-pradet"
                     rel="noopener noreferrer"
+                    target="_blank"
                   >
                     <FaLinkedin />
                   </Links>
@@ -107,6 +112,7 @@ const About = () => {
                   <Links
                     href="https://github.com/hellodit33"
                     rel="noopener noreferrer"
+                    target="_blank"
                   >
                     <FaGithub />
                   </Links>
@@ -115,7 +121,7 @@ const About = () => {
             </ColumnLinks>
           </TextContainer>
         </Container>
-        <ArrowContainer>
+        <ArrowContainer onClick={handleArrowClick}>
           <ArrowContent>
             <Arrows>
               <svg viewBox="0 0 60 48">
@@ -136,8 +142,7 @@ const About = () => {
           </ArrowContent>
         </ArrowContainer>
       </S.FullSection>
-
-      <S.FullSection style={{ backgroundColor: colors.yellow_highlight }}>
+      <S.FullSection id="next-slide" style={{ backgroundColor: colors.yellow_highlight }}>
         <S.SecondContainer>
           <SectionTitle>WORK EXPERIENCE</SectionTitle>
           <S.WorkContainer>
@@ -155,21 +160,24 @@ const About = () => {
               After that I worked as an Editorial and Marketing Manager for the
               film recommendation startup Hint in Stockholm. There I used my
               knowledge in film and journalism. Later on I also worked with
-              front-end development and UX at the same startup (2021-2022).
+              front-end development (JavaScript, Flutter, Firebase) and UX
+              (Figma) at the same startup (2021-2022).
             </S.WorkParagraph>
             <S.WorkParagraph>
-              <S.BoxTitle>👩🏻‍💻 Now: Front-End Developer</S.BoxTitle>
-              Nowadays, since November 2022, I work as a Front-end developer at
-              Redmind where I work with website and app development for the
+              <S.BoxTitle>👩🏻‍💻 Now: Software Developer</S.BoxTitle>
+              Nowadays, since November 2022, I work as a Software Developer at
+              Redmind where I develop a website, a dashboard and an app for the
               client Moveat (React, React Native, TypeScript, NodeJS, Firebase).
               I collaborate with the team and the client on an iterative
               process.
             </S.WorkParagraph>
             <S.WorkParagraph>
               <S.BoxTitle>🚀 Building Up Great Ideas</S.BoxTitle>
-              What I love the most in Front-end development is to make impactful
-              ideas alive, through websites and apps. I also enjoy that I can
-              see the results of my job more or less right away.
+              What I love the most in Software Development is to make impactful
+              ideas come alive, through websites and apps. I enjoy that I can
+              see the results of my job more or less right away. A great day at
+              work is when I've changed something to make it more efficient and
+              user-friendly.
             </S.WorkParagraph>
           </S.WorkContainer>
         </S.SecondContainer>
@@ -178,6 +186,9 @@ const About = () => {
       <S.FullSection style={{ backgroundColor: colors.purple_dark }}>
         <S.ThirdContainer>
           <SectionTitle style={{ color: "white" }}>STUDIES</SectionTitle>
+          <div style={{ display:'flex', justifySelf:'center', color: "white" }}>
+           Move your mouse over each card to read more.
+          </div>
           <S.StudiesImage style={{ top: "400px", left: "25px" }} src={light} />
           <S.StudiesImage style={{ top: "650px", left: "50px" }} src={stars} />
           <S.StudiesImage
@@ -214,15 +225,17 @@ const About = () => {
             </S.StudiesParagraph>
             <S.StudiesParagraph>
               🇫🇷 🇸🇪 🇬🇧 🇮🇹 🇩🇪 Besides coding languages, I've also studied human
-              languages. I became fluent in Swedish 2014, and I have a limited
-              working proficiency in Italian and German. I've even studied
-              Icelandic and Arabic.
+              languages. My mother tongue is French and I speak fluent English.
+              I also became fluent in Swedish 2014, and I have a limited working
+              proficiency in Italian and German. I'm comfortable understanding
+              Norwegian and Danish after two summer jobs in 'Scandinavian' in
+              Norway and Iceland. I've even studied Icelandic and Arabic.
             </S.StudiesParagraph>
             <S.StudiesParagraph>
               🌱 I have also a deep interest for sustainability. I'm engaged
               against climate change, and I've studied Climate change and
               Geology, as well as Innovation & Sustainability, and Rhetoric and
-              Climate Transition.
+              Climate Transition. To me, this is the most important issue the world has to face.
             </S.StudiesParagraph>
           </S.StudiesContainer>
         </S.ThirdContainer>
