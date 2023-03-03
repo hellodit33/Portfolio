@@ -213,6 +213,9 @@ export const ArrowContainer = styled.div`
   height: 100vh;
   padding: 20px;
   text-align: center;
+  @media only screen and (max-width: 1100px) {
+    display:none;
+  }
 `;
 
 export const ArrowContent = styled.div`
