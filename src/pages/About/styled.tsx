@@ -413,3 +413,10 @@ export const Grid = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 `;
+
+export const Message=styled.div`
+display:flex;
+align-self:center;
+color:white;
+justify-self:center;
+`
