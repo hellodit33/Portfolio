@@ -11,6 +11,12 @@ export const Space = styled.div<SpaceProps>`
   width: ${(props) => (props.horizontal ? 10 * (props.x || 1) : 0)}px;
 `;
 
+export const Center = styled.div`
+display: flex;
+align-items:center;
+justify-content: center;
+flex-direction:column;`
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;

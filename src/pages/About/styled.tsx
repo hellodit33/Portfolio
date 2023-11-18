@@ -34,6 +34,7 @@ export const WorkParagraph = styled.p`
   border-color: ${colors.orange} !important;
   margin: 0;
   padding: 30px;
+  padding-top:20px;
   font-size: 17px;
   &:nth-child(even) {
     border-left: 2px dashed;

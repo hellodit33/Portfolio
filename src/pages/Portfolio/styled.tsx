@@ -16,8 +16,8 @@ export const First = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 1100px) {
-    column-gap: 50px;
+  @media screen and (max-width: 1200px) {
+    column-gap: 0px;
   }
 
   @media screen and (max-width: 768px) {
@@ -141,8 +141,8 @@ export const FrontImage = styled.img`
   }
 `;
 export const WorkImage = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
@@ -152,11 +152,6 @@ export const WorkImage = styled.img`
   }
 
   @media screen and (max-width: 1200px) {
-    width: 300px;
-    height: 300px;
-  }
-
-  @media screen and (max-width: 768px) {
     width: 200px;
     height: 200px;
   }
@@ -332,6 +327,25 @@ export const WorkContainer = styled.div`
   }
 `;
 
+export const Works = styled.div`
+display: grid;
+grid-template-rows: 1fr 1fr;
+grid-template-columns: 1fr;
+
+@media screen and (max-width: 950px) {
+   grid-template-rows: 1fr;
+  }
+`
+
+export const MobileWorks = styled.div`
+@media screen and (max-width: 768px) {
+display: flex;
+flex-direction:row;
+align-content:center;
+justify-content: center;
+}
+`
+
 export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -363,6 +377,15 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   @media screen and (max-width: 950px) {
     margin-top: 50px;
+  }
+`;
+
+export const PreviousWork = styled.div`
+display: flex;
+@media screen and (min-width: 768px) {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
   }
 `;
 

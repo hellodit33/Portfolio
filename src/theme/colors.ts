@@ -11,6 +11,8 @@ export default {
     green_highlight:'#06d6a0',
     moveat: "#FEE100",
     hint: "#d7bdfb",
+    multisoft: "#3980DB",
+    klimato: "#b1dec1",
     bookclub: "#9b5d64",
     fridge: "#a1c2fc", 
     dark_beige:"#b8ad96",

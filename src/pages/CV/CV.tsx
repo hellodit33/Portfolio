@@ -29,11 +29,36 @@ const CV = () => {
         </S.CVTitle>
         <S.Container>
           <S.ColumnContainer>
+          <S.MissionTitle>
+              Frontend Developer at Multisoft, Stockholm
+            </S.MissionTitle>
+            <S.DateMission>
+              <S.Date>May 2023 - Present </S.Date>
+              <div>
+                <S.Work>Front-end Developer</S.Work>
+                <S.Work>
+                  Further development of the low-code platform Softadmin (TypeScript,
+                  Less (CSS), C# and T-SQL).
+                </S.Work>
+              </div>
+            </S.DateMission>
+            <S.MissionTitle>
+              Frontend Developer at Klimato, Stockholm
+            </S.MissionTitle>
+            <S.DateMission>
+              <S.Date>April 2023 - May 2023 </S.Date>
+              <div>
+                <S.Work>Front-end Developer</S.Work>
+                <S.Work>
+                Built a Life Cycle Analysis Application as a prototype for Klimato (React with TypeScript, Styled components, Node.js, MongoDB, UX).
+                </S.Work>
+              </div>
+            </S.DateMission>
             <S.MissionTitle>
               Software Developer at Redmind, Stockholm
             </S.MissionTitle>
             <S.DateMission>
-              <S.Date>November 2022 - Present </S.Date>
+              <S.Date>November 2022 - April 2023 </S.Date>
               <div>
                 <S.Work>Software Developer</S.Work>
                 <S.Work>

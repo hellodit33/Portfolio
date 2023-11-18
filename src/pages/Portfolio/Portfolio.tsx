@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
+  Center,
   FrontParagraph,
   Paragraph,
   SectionTitle,
@@ -16,6 +17,12 @@ import lillaateljen from "../../assets/images/lillaateljen.png";
 import dagsforfranska from "../../assets/images/dagsforfranska.png";
 import moveat from "../../assets/images/moveat.webp";
 import moveat2 from "../../assets/images/moveat.png";
+import multisoft from "../../assets/images/multisoft.png";
+import multisoftlogo from "../../assets/images/multisoftlogo.png";
+import multisoftmain from "../../assets/images/multisoftmain.png";
+import klimatologo from "../../assets/images/klimatologo.png";
+import klimatomain from "../../assets/images/klimatomain.png";
+import klimato from "../../assets/images/klimato.png";
 import fridgeease2 from "../../assets/images/fridgeease2.png";
 import bookclub2 from "../../assets/images/bookclub2.png";
 import lillaateljen2 from "../../assets/images/lillaateljen2.png";
@@ -91,18 +98,46 @@ const Portfolio = () => {
           <Space />
           <S.First>
             <S.WorkContainer>
+              <S.Works>
               <Subtitle>Work</Subtitle>
               {!isSmallMobile && <Space />}
-
+              <S.MobileWorks>
+              <Center>
               <S.WorkImage
                 onClick={() => handleSectionButtonClick(1)}
-                src={moveat2}
+                src={multisoft}
               ></S.WorkImage>
               <Space />
               <S.WorkHeader>
-                Software Developer at Redmind for Moveat right now (React &
-                React Native, TS).
+                Right now: Front-end Developer at Multisoft.
               </S.WorkHeader>
+              </Center>
+              <Space x={2} />
+              <S.PreviousWork>
+              <Center>
+              <S.WorkImage
+                onClick={() => handleSectionButtonClick(2)}
+                src={moveat2}
+              ></S.WorkImage>
+                <Space/>
+              <S.WorkHeader>
+                Previously: Software Developer at Redmind for Moveat.
+              </S.WorkHeader>
+              
+              </Center>
+           <Center>
+              <S.WorkImage
+                onClick={() => handleSectionButtonClick(3)}
+                src={klimato}
+              ></S.WorkImage>
+                <Space/>
+              <S.WorkHeader>
+                Previously: Front-end Developer for Klimato.
+              </S.WorkHeader>
+              </Center>
+              </S.PreviousWork>
+              </S.MobileWorks>
+              </S.Works>
             </S.WorkContainer>
             <div>
               <Subtitle>Personal Projects</Subtitle>
@@ -110,7 +145,7 @@ const Portfolio = () => {
               <S.ProjectsContainer>
                 <S.ProjectContainer>
                   <S.ProjectImage
-                    onClick={() => handleSectionButtonClick(2)}
+                    onClick={() => handleSectionButtonClick(4)}
                     src={fridgeease2}
                   ></S.ProjectImage>
                   <S.ProjectHeader>
@@ -119,7 +154,7 @@ const Portfolio = () => {
                 </S.ProjectContainer>
                 <S.ProjectContainer>
                   <S.ProjectImage
-                    onClick={() => handleSectionButtonClick(3)}
+                    onClick={() => handleSectionButtonClick(5)}
                     src={bookclub2}
                   ></S.ProjectImage>
                   <S.ProjectHeader>
@@ -128,7 +163,7 @@ const Portfolio = () => {
                 </S.ProjectContainer>
                 <S.ProjectContainer>
                   <S.ProjectImage
-                    onClick={() => handleSectionButtonClick(4)}
+                    onClick={() => handleSectionButtonClick(6)}
                     src={hintonboarding2}
                   ></S.ProjectImage>
                   <S.ProjectHeader>
@@ -137,7 +172,7 @@ const Portfolio = () => {
                 </S.ProjectContainer>
                 <S.ProjectContainer>
                   <S.ProjectImage
-                    onClick={() => handleSectionButtonClick(5)}
+                    onClick={() => handleSectionButtonClick(7)}
                     src={lillaateljen2}
                   ></S.ProjectImage>
                   <S.ProjectHeader>
@@ -146,7 +181,7 @@ const Portfolio = () => {
                 </S.ProjectContainer>
                 <S.ProjectContainer>
                   <S.ProjectImage
-                    onClick={() => handleSectionButtonClick(6)}
+                    onClick={() => handleSectionButtonClick(8)}
                     src={dagsforfranska2}
                   ></S.ProjectImage>
                   <S.ProjectHeader>
@@ -155,7 +190,7 @@ const Portfolio = () => {
                 </S.ProjectContainer>
                 <S.ProjectContainer>
                   <S.ProjectImage
-                    onClick={() => handleSectionButtonClick(7)}
+                    onClick={() => handleSectionButtonClick(9)}
                     src={firstprojects2}
                   ></S.ProjectImage>
                   <S.ProjectHeader>First front-end projects</S.ProjectHeader>
@@ -173,9 +208,59 @@ const Portfolio = () => {
       ),
     },
     {
+      title: "Multisoft",
+      color: colors.dags,
+      section: 1,
+      body: (
+        <S.WrapperContainer  id="next-slide">
+          <S.FirstWrapper>
+            <div>
+              <S.ProjectTitle>Multisoft</S.ProjectTitle>
+              <S.Image src={multisoftmain}></S.Image>
+            </div>
+            <div>
+              <Paragraph>
+                Today I work as a Front-end Developer in the R&D team at Multisoft. I further develop the low-code platform
+                Softadmin. It uses standard components enabling great flexibility and scalability, 
+                and is used by clients such as Volvo, Ica, Scania, Samhall, Länsförsäkringar and Swedbank.
+              </Paragraph>
+              <Space />
+              <Paragraph>
+                In my everyday work I use TypeScript and Less, together with C# and T-SQL.
+              </Paragraph>
+            </div>
+          </S.FirstWrapper>
+
+          <S.SecondWrapper>
+            <S.LinkContainer>
+             
+          
+
+              <S.Link
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://multisoft.com/"
+              >
+                <S.LinkImage src={multisoftlogo} />
+              </S.Link>
+            </S.LinkContainer>
+            <S.NotesWrapper>
+              <S.TechStackList>
+                <S.TechListTitle>Tech Stack:</S.TechListTitle>
+                <S.TechListItem>TypeScript</S.TechListItem>
+                <S.TechListItem>Less (CSS)</S.TechListItem>
+                <S.TechListItem>C#</S.TechListItem>
+                <S.TechListItem>T-SQL</S.TechListItem>
+              </S.TechStackList>
+            </S.NotesWrapper>
+          </S.SecondWrapper>
+        </S.WrapperContainer>
+      ),
+    },
+    {
       title: "Moveat",
       color: colors.moveat,
-      section: 1,
+      section: 2,
       body: (
         <S.WrapperContainer  id="next-slide">
           <S.FirstWrapper>
@@ -185,15 +270,15 @@ const Portfolio = () => {
             </div>
             <div>
               <Paragraph>
-                Today, I work at Redmind for the client Moveat, a total food
+                Previously, I worked at Redmind for the client Moveat, a total food
                 experience that helps users to capture, share, and discover food
                 experience with their family and friends.
               </Paragraph>
               <Space />
               <Paragraph>
-                I work on the app (React Native), the website and the dashboard
+                I worked on the app (React Native), the website and the dashboard
                 (React), developing new functions together with the client and
-                the team on an iterative process. I've worked on the redesign of
+                the team on an iterative process. I worked on the redesign of
                 the dashboard and the queue line function.
               </Paragraph>
             </div>
@@ -243,10 +328,62 @@ const Portfolio = () => {
       ),
     },
     {
+      title: "Klimato",
+      color: colors.klimato,
+      section: 3,
+      body: (
+        <S.WrapperContainer  id="next-slide">
+          <S.FirstWrapper>
+            <div>
+              <S.ProjectTitle>Klimato</S.ProjectTitle>
+              <S.Image src={klimatomain}></S.Image>
+            </div>
+            <div>
+              <Paragraph>
+                Previously, I worked as a Front-end Developer for Klimato's Life Cycle Analysis prototype. 
+                It is a fullstack application, and it makes it possible to calculate the carbon footprint of different food products.
+              </Paragraph>
+              <Space />
+              <Paragraph>
+                I developed the app on my own with React and Typescript, as well as styled components for the styling and Node.js and MongoDB for the back-end.
+                I also produced the UX and UI work on my own before developing the app. I worked in collaboration with the LCA expert at Klimato and the CTO.
+              </Paragraph>
+            </div>
+          </S.FirstWrapper>
+
+          <S.SecondWrapper>
+            <S.LinkContainer>
+             
+              <Space />
+
+              <S.Link
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.klimato.co/"
+              >
+                <S.LinkImage src={klimatologo} />
+              </S.Link>
+            </S.LinkContainer>
+            <S.NotesWrapper>
+              <S.TechStackList>
+                <S.TechListTitle>Tech Stack:</S.TechListTitle>
+                <S.TechListItem>React </S.TechListItem>
+                <S.TechListItem>TypeScript</S.TechListItem>
+                <S.TechListItem>NodeJS</S.TechListItem>
+                <S.TechListItem>MongoDB</S.TechListItem>
+                <S.TechListItem>Figma</S.TechListItem>
+                <S.TechListItem>Trello</S.TechListItem>
+              </S.TechStackList>
+            </S.NotesWrapper>
+          </S.SecondWrapper>
+        </S.WrapperContainer>
+      ),
+    },
+    {
       title: "FridgeEase",
       color: colors.fridge,
 
-      section: 2,
+      section: 4,
 
       body: (
         <S.WrapperContainer>
@@ -319,9 +456,7 @@ const Portfolio = () => {
     {
       title: "Bookclub",
       color: colors.bookclub,
-
-      section: 3,
-
+      section: 5,
       body: (
         <S.WrapperContainer>
           <S.FirstWrapper>
@@ -378,9 +513,7 @@ const Portfolio = () => {
     {
       title: "Hint Onboarding",
       color: colors.hint,
-
-      section: 4,
-
+      section: 6,
       body: (
         <S.WrapperContainer>
           <S.FirstWrapper>
@@ -445,9 +578,7 @@ const Portfolio = () => {
     {
       title: "Lilla Ateljen",
       color: colors.dark_beige,
-
-      section: 5,
-
+      section: 7,
       body: (
         <S.WrapperContainer>
           <S.FirstWrapper>
@@ -510,9 +641,7 @@ const Portfolio = () => {
     {
       title: "Dags för franska",
       color: colors.dags,
-
-      section: 6,
-
+      section: 8,
       body: (
         <S.WrapperContainer>
           <S.FirstWrapper>
@@ -574,7 +703,7 @@ const Portfolio = () => {
     {
       title: "First Front-end Projects",
       color: "white",
-      section: 7,
+      section: 9,
       body: (
         <S.WrapperFrontContainer>
           <S.FirstFrontWrapper>

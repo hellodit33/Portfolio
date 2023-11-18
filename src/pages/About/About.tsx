@@ -69,9 +69,9 @@ const About = () => {
                 I'm Élodie
               </Title>
               <Paragraph>
-                I'm a front-end developer with a background in journalism. I'm
-                working as a Software Developer at Redmind, a technology and
-                venture studio based in Stockholm.
+                I'm a Front-end developer with a background in journalism. I'm
+                currently working at Multisoft, further developing 
+                the low-code platform Softadmin.
               </Paragraph>
               <Paragraph>
                 Efficient, creative and passionate about film and
@@ -156,20 +156,20 @@ const About = () => {
               protests.
             </S.WorkParagraph>
             <S.WorkParagraph>
-              <S.BoxTitle>💡 Then: A Startup Journey</S.BoxTitle>
+              <S.BoxTitle>💡 Then: Startup Journeys</S.BoxTitle>
               After that I worked as an Editorial and Marketing Manager for the
-              film recommendation startup Hint in Stockholm. There I used my
+              film recommendation startup Hint in Stockholm where I used my
               knowledge in film and journalism. Later on I also worked with
               front-end development (JavaScript, Flutter, Firebase) and UX
-              (Figma) at the same startup (2021-2022).
+              (Figma) at the same startup (2021-2022). After that, I worked as a Software Developer 
+              for Redmind, a technology and venture studio, and specifically for the client Moveat's app, dashboard and website (React, React Native, TypeScript, NodeJS, Firebase, 2022-2023).
             </S.WorkParagraph>
             <S.WorkParagraph>
-              <S.BoxTitle>👩🏻‍💻 Now: Software Developer</S.BoxTitle>
-              Nowadays, since November 2022, I work as a Software Developer at
-              Redmind where I develop a website, a dashboard and an app for the
-              client Moveat (React, React Native, TypeScript, NodeJS, Firebase).
-              I collaborate with the team and the client on an iterative
-              process.
+              <S.BoxTitle>👩🏻‍💻 Now: Front-end Developer</S.BoxTitle>
+              Nowadays, since May 2023, I work as a Front-end Developer at Multisoft,
+              where I work in the R&D team, further developing the low-code platform
+              Softadmin, one of the most effective on the market based on standard components with great flexibility and scalability.
+              In my everyday work I use TypeScript, LESS, C# and T-SQL.
             </S.WorkParagraph>
             <S.WorkParagraph>
               <S.BoxTitle>🚀 Building Up Great Ideas</S.BoxTitle>
@@ -218,8 +218,8 @@ const About = () => {
               - the subject I'm most passionate about.
             </S.StudiesParagraph>
             <S.StudiesParagraph>
-              👩🏻‍💻 Since 2021 I study Front-End development at the professional
-              school KYH in Stockholm. I will graduate in May 2023. I had found
+              👩🏻‍💻 Between 2021 and 2023 I studied Front-End development at the professional
+              school KYH in Stockholm. I had found
               out about Front-end during my journalism studies, and enjoyed the
               building, design and logic process behind it.
             </S.StudiesParagraph>
